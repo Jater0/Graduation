@@ -7138,3 +7138,1413 @@
 [DEBUG][21-02-19][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@12c9e92c]
 [DEBUG][21-02-19][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@12c9e92c]
 [DEBUG][21-02-19][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 315222316 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.logging.LogFactory]Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Created connection 970186990.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@39d3e0ee]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==>  Preparing: select * from admin where admin_email = ? or admin_phone = ? or _id = ? and password = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==> Parameters: 1452606865@qq.com(String), 1452606865@qq.com(String), 1452606865@qq.com(String), 582965(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]<==      Total: 1
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@39d3e0ee]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@39d3e0ee]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 970186990 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 970186990 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@39d3e0ee]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==>  Preparing: select * from admin where admin_email = ? or admin_phone = ? or _id = ? and password = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==> Parameters: 15829344762(String), 15829344762(String), 15829344762(String), 582965(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]<==      Total: 0
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@39d3e0ee]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@39d3e0ee]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 970186990 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 970186990 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@39d3e0ee]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==>  Preparing: select * from admin where admin_email = ? or admin_phone = ? or _id = ? and password = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==> Parameters: 15920344762(String), 15920344762(String), 15920344762(String), 582965(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]<==      Total: 1
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@39d3e0ee]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@39d3e0ee]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 970186990 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.logging.LogFactory]Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Created connection 1786676189.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@6a7e83dd]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==>  Preparing: select * from admin where admin_email = ? or admin_phone = ? or _id = ? and password = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==> Parameters: null, null, null, null
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]<==      Total: 0
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@6a7e83dd]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@6a7e83dd]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 1786676189 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.logging.LogFactory]Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Created connection 122689914.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@750197a]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==>  Preparing: select * from admin where admin_email = ? or admin_phone = ? or _id = ? and password = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==> Parameters: null, null, null, null
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]<==      Total: 0
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@750197a]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@750197a]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 122689914 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 122689914 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@750197a]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==>  Preparing: select * from admin where admin_email = ? or admin_phone = ? or _id = ? and password = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==> Parameters: null, null, null, null
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]<==      Total: 0
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@750197a]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@750197a]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 122689914 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 122689914 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@750197a]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==>  Preparing: select * from admin where admin_email = ? or admin_phone = ? or _id = ? and password = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==> Parameters: null, null, null, null
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]<==      Total: 0
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@750197a]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@750197a]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 122689914 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 122689914 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@750197a]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==>  Preparing: select * from admin where admin_email = ? or admin_phone = ? or _id = ? and password = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==> Parameters: 15920344762(String), 15920344762(String), 15920344762(String), 582965(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]<==      Total: 1
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@750197a]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@750197a]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 122689914 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 122689914 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@750197a]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==>  Preparing: select * from admin where admin_email = ? or admin_phone = ? or _id = ? and password = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==> Parameters: 1452606865@qq.com(String), 1452606865@qq.com(String), 1452606865@qq.com(String), 582965(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]<==      Total: 1
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@750197a]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@750197a]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 122689914 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 122689914 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@750197a]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==>  Preparing: select * from admin where admin_email = ? or admin_phone = ? or _id = ? and password = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==> Parameters: 1452606865@qq.com(String), 1452606865@qq.com(String), 1452606865@qq.com(String), 582965(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]<==      Total: 1
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@750197a]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@750197a]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 122689914 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 122689914 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@750197a]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==>  Preparing: select * from admin where admin_email = ? or admin_phone = ? or _id = ? and password = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==> Parameters: 1452606865@qq.com(String), 1452606865@qq.com(String), 1452606865@qq.com(String), 582965(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]<==      Total: 1
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@750197a]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@750197a]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 122689914 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 122689914 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@750197a]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==>  Preparing: select * from admin where admin_email = ? or admin_phone = ? or _id = ? and password = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==> Parameters: 1452606865@qq.com(String), 1452606865@qq.com(String), 1452606865@qq.com(String), 582965(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]<==      Total: 1
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@750197a]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@750197a]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 122689914 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 122689914 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@750197a]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==>  Preparing: select * from admin where admin_email = ? or admin_phone = ? or _id = ? and password = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==> Parameters: 1452606865@qq.com(String), 1452606865@qq.com(String), 1452606865@qq.com(String), 582965(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]<==      Total: 1
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@750197a]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@750197a]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 122689914 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 122689914 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@750197a]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==>  Preparing: select * from admin where admin_email = ? or admin_phone = ? or _id = ? and password = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==> Parameters: 1452606865@qq.com(String), 1452606865@qq.com(String), 1452606865@qq.com(String), 123123(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]<==      Total: 1
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@750197a]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@750197a]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 122689914 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 122689914 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@750197a]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==>  Preparing: select * from admin where admin_email = ? or admin_phone = ? or _id = ? and password = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==> Parameters: 1452606865@qq.com(String), 1452606865@qq.com(String), 1452606865@qq.com(String), 123124fref(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]<==      Total: 1
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@750197a]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@750197a]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 122689914 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 122689914 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@750197a]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==>  Preparing: select * from admin where admin_email = ? or admin_phone = ? or _id = ? and password = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==> Parameters: 15920344762,15920344762(String), 15920344762,15920344762(String), 15920344762,15920344762(String), 582965,582966(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]<==      Total: 0
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@750197a]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@750197a]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 122689914 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 122689914 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@750197a]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==>  Preparing: select * from admin where admin_email = ? or admin_phone = ? or _id = ? and password = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==> Parameters: 15920344762,15920344762(String), 15920344762,15920344762(String), 15920344762,15920344762(String), 582965,582966(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]<==      Total: 0
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@750197a]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@750197a]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 122689914 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.logging.LogFactory]Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Created connection 731304985.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2b96d419]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==>  Preparing: select * from admin where admin_email = ? or admin_phone = ? or _id = ? and password = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==> Parameters: 15920344762(String), 15920344762(String), 15920344762(String), 582966(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]<==      Total: 1
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2b96d419]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2b96d419]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 731304985 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 731304985 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2b96d419]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==>  Preparing: select * from admin where admin_email = ? or admin_phone = ? or _id = ? and password = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==> Parameters: 15920344762(String), 15920344762(String), 15920344762(String), 582966(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]<==      Total: 1
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2b96d419]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2b96d419]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 731304985 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.logging.LogFactory]Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Created connection 1981432760.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@761a43b8]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==>  Preparing: select * from admin where (admin_email = ? or admin_phone = ? or _id = ?) and password = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==> Parameters: 15920344762(String), 15920344762(String), 15920344762(String), 582966(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]<==      Total: 0
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@761a43b8]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@761a43b8]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 1981432760 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 1981432760 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@761a43b8]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==>  Preparing: select * from admin where (admin_email = ? or admin_phone = ? or _id = ?) and password = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==> Parameters: 15920344762(String), 15920344762(String), 15920344762(String), 582966(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]<==      Total: 0
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@761a43b8]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@761a43b8]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 1981432760 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.logging.LogFactory]Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Created connection 1798083876.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@6b2c9524]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==>  Preparing: select * from admin where (admin_email = ? or admin_phone = ? or _id = ?) and password = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==> Parameters: 15920344762(String), 15920344762(String), 15920344762(String), 582966(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]<==      Total: 0
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@6b2c9524]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@6b2c9524]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 1798083876 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.logging.LogFactory]Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Created connection 162094081.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==>  Preparing: select * from admin where (admin_email = ? or admin_phone = ? or _id = ?) and password = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==> Parameters: 15920344762(String), 15920344762(String), 15920344762(String), 582966(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]<==      Total: 0
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 162094081 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 162094081 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==>  Preparing: select * from admin where (admin_email = ? or admin_phone = ? or _id = ?) and password = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==> Parameters: 1452606865@qq.com(String), 1452606865@qq.com(String), 1452606865@qq.com(String), 582965(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]<==      Total: 1
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 162094081 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 162094081 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==>  Preparing: select * from admin where (admin_email = ? or admin_phone = ? or _id = ?) and password = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==> Parameters: 1452606865@qq.com(String), 1452606865@qq.com(String), 1452606865@qq.com(String), 582965(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]<==      Total: 1
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 162094081 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 162094081 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==>  Preparing: select * from admin where (admin_email = ? or admin_phone = ? or _id = ?) and password = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==> Parameters: 1452606865@qq.com(String), 1452606865@qq.com(String), 1452606865@qq.com(String), 123(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]<==      Total: 0
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 162094081 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 162094081 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==>  Preparing: select * from admin where (admin_email = ? or admin_phone = ? or _id = ?) and password = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==> Parameters: 1452606865@qq.com(String), 1452606865@qq.com(String), 1452606865@qq.com(String), 123(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]<==      Total: 0
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 162094081 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 162094081 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==>  Preparing: select * from admin where (admin_email = ? or admin_phone = ? or _id = ?) and password = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==> Parameters: 1452606865@qq.com(String), 1452606865@qq.com(String), 1452606865@qq.com(String), 582965(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]<==      Total: 1
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 162094081 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 162094081 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==>  Preparing: select * from admin where (admin_email = ? or admin_phone = ? or _id = ?) and password = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==> Parameters: 1452606865@qq.com(String), 1452606865@qq.com(String), 1452606865@qq.com(String), 582965(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]<==      Total: 1
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 162094081 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 162094081 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==>  Preparing: select * from admin where (admin_email = ? or admin_phone = ? or _id = ?) and password = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==> Parameters: 1452606865@qq.com(String), 1452606865@qq.com(String), 1452606865@qq.com(String), 582965(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]<==      Total: 1
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 162094081 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 162094081 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==>  Preparing: select * from admin where (admin_email = ? or admin_phone = ? or _id = ?) and password = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==> Parameters: 1452606865@qq.com(String), 1452606865@qq.com(String), 1452606865@qq.com(String), 582954(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]<==      Total: 0
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 162094081 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 162094081 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==>  Preparing: select * from admin where (admin_email = ? or admin_phone = ? or _id = ?) and password = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==> Parameters: 1452606865@qq.com(String), 1452606865@qq.com(String), 1452606865@qq.com(String), 582965(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]<==      Total: 1
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 162094081 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 162094081 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==>  Preparing: select * from admin where (admin_email = ? or admin_phone = ? or _id = ?) and password = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==> Parameters: 1452606865@qq.com(String), 1452606865@qq.com(String), 1452606865@qq.com(String), 582965(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]<==      Total: 1
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 162094081 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 162094081 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==>  Preparing: select * from admin where (admin_email = ? or admin_phone = ? or _id = ?) and password = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==> Parameters: 1452606865@qq.com(String), 1452606865@qq.com(String), 1452606865@qq.com(String), 582965(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]<==      Total: 1
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 162094081 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 162094081 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==>  Preparing: select * from admin where (admin_email = ? or admin_phone = ? or _id = ?) and password = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==> Parameters: 1452606865@qq.com(String), 1452606865@qq.com(String), 1452606865@qq.com(String), 582965(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]<==      Total: 1
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 162094081 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 162094081 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==>  Preparing: select * from admin where (admin_email = ? or admin_phone = ? or _id = ?) and password = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==> Parameters: 1452606865@qq.com(String), 1452606865@qq.com(String), 1452606865@qq.com(String), 582965(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]<==      Total: 1
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 162094081 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 162094081 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==>  Preparing: select * from admin where (admin_email = ? or admin_phone = ? or _id = ?) and password = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==> Parameters: 1452606865@qq.com(String), 1452606865@qq.com(String), 1452606865@qq.com(String), 582965(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]<==      Total: 1
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 162094081 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 162094081 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==>  Preparing: select * from admin where (admin_email = ? or admin_phone = ? or _id = ?) and password = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==> Parameters: 1452606865@qq.com(String), 1452606865@qq.com(String), 1452606865@qq.com(String), 582965(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]<==      Total: 1
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 162094081 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 162094081 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==>  Preparing: select * from admin where (admin_email = ? or admin_phone = ? or _id = ?) and password = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==> Parameters: 1452606865@qq.com(String), 1452606865@qq.com(String), 1452606865@qq.com(String), 582965(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]<==      Total: 1
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 162094081 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 162094081 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==>  Preparing: select * from admin where (admin_email = ? or admin_phone = ? or _id = ?) and password = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==> Parameters: 1452606865@qq.com(String), 1452606865@qq.com(String), 1452606865@qq.com(String), 582965(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]<==      Total: 1
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 162094081 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 162094081 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==>  Preparing: select * from admin where (admin_email = ? or admin_phone = ? or _id = ?) and password = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==> Parameters: 1452606865@qq.com(String), 1452606865@qq.com(String), 1452606865@qq.com(String), 582965(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]<==      Total: 1
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 162094081 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 162094081 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==>  Preparing: select * from admin where (admin_email = ? or admin_phone = ? or _id = ?) and password = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==> Parameters: 1452606865@qq.com(String), 1452606865@qq.com(String), 1452606865@qq.com(String), 582965(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]<==      Total: 1
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 162094081 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 162094081 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==>  Preparing: select * from admin where (admin_email = ? or admin_phone = ? or _id = ?) and password = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==> Parameters: 1452606865@qq.com(String), 1452606865@qq.com(String), 1452606865@qq.com(String), 582965(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]<==      Total: 1
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 162094081 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 162094081 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==>  Preparing: select * from admin where (admin_email = ? or admin_phone = ? or _id = ?) and password = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==> Parameters: 1452606865@qq.com(String), 1452606865@qq.com(String), 1452606865@qq.com(String), 582965(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]<==      Total: 1
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 162094081 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 162094081 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==>  Preparing: select * from admin where (admin_email = ? or admin_phone = ? or _id = ?) and password = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==> Parameters: 1452606865@qq.com(String), 1452606865@qq.com(String), 1452606865@qq.com(String), 582965(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]<==      Total: 1
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 162094081 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 162094081 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==>  Preparing: select * from admin where (admin_email = ? or admin_phone = ? or _id = ?) and password = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==> Parameters: 1452606865@qq.com(String), 1452606865@qq.com(String), 1452606865@qq.com(String), 582965(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]<==      Total: 1
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 162094081 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 162094081 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==>  Preparing: select * from admin where (admin_email = ? or admin_phone = ? or _id = ?) and password = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==> Parameters: 1452606865@qq.com(String), 1452606865@qq.com(String), 1452606865@qq.com(String), 582965(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]<==      Total: 1
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 162094081 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 162094081 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==>  Preparing: select * from admin where (admin_email = ? or admin_phone = ? or _id = ?) and password = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==> Parameters: 1452606865@qq.com(String), 1452606865@qq.com(String), 1452606865@qq.com(String), 582965(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]<==      Total: 1
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 162094081 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 162094081 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==>  Preparing: select * from admin where (admin_email = ? or admin_phone = ? or _id = ?) and password = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==> Parameters: 1452606865@qq.com(String), 1452606865@qq.com(String), 1452606865@qq.com(String), 582965(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]<==      Total: 1
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 162094081 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 162094081 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==>  Preparing: select * from admin where (admin_email = ? or admin_phone = ? or _id = ?) and password = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==> Parameters: 1452606865@qq.com(String), 1452606865@qq.com(String), 1452606865@qq.com(String), 582965(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]<==      Total: 1
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 162094081 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 162094081 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==>  Preparing: select * from admin where (admin_email = ? or admin_phone = ? or _id = ?) and password = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==> Parameters: 1452606865@qq.com(String), 1452606865@qq.com(String), 1452606865@qq.com(String), (String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]<==      Total: 0
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 162094081 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 162094081 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==>  Preparing: select * from admin where (admin_email = ? or admin_phone = ? or _id = ?) and password = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==> Parameters: 1452606865@qq.com(String), 1452606865@qq.com(String), 1452606865@qq.com(String), 582965(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]<==      Total: 1
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 162094081 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 162094081 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==>  Preparing: select * from admin where (admin_email = ? or admin_phone = ? or _id = ?) and password = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==> Parameters: 1452606865@qq.com(String), 1452606865@qq.com(String), 1452606865@qq.com(String), 582965(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]<==      Total: 1
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 162094081 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 162094081 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==>  Preparing: select * from admin where (admin_email = ? or admin_phone = ? or _id = ?) and password = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==> Parameters: 1452606865@qq.com(String), 1452606865@qq.com(String), 1452606865@qq.com(String), 582965(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]<==      Total: 1
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 162094081 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 162094081 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==>  Preparing: select * from admin where (admin_email = ? or admin_phone = ? or _id = ?) and password = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==> Parameters: 1452606865@qq.com(String), 1452606865@qq.com(String), 1452606865@qq.com(String), 582965(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]<==      Total: 1
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 162094081 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 162094081 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==>  Preparing: select * from admin where (admin_email = ? or admin_phone = ? or _id = ?) and password = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==> Parameters: 15920344762(String), 15920344762(String), 15920344762(String), 582965(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]<==      Total: 1
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 162094081 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 162094081 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==>  Preparing: select * from admin where (admin_email = ? or admin_phone = ? or _id = ?) and password = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==> Parameters: 1452606865@qq.com(String), 1452606865@qq.com(String), 1452606865@qq.com(String), 582965(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]<==      Total: 1
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 162094081 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 162094081 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==>  Preparing: select * from admin where (admin_email = ? or admin_phone = ? or _id = ?) and password = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==> Parameters: 1452606865@qq.com(String), 1452606865@qq.com(String), 1452606865@qq.com(String), 582965(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]<==      Total: 1
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9a95c01]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 162094081 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.logging.LogFactory]Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Created connection 1381628724.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5259fb34]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.updateAdminInfo]==>  Preparing: select update_admin(?, ?, ?, ?)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.updateAdminInfo]==> Parameters: adm582965(String), 1452606865@qq.com(String), 15920344762(String), Jater0(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.updateAdminInfo]<==      Total: 1
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5259fb34]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5259fb34]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 1381628724 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 1381628724 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5259fb34]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==>  Preparing: select * from admin where (admin_email = ? or admin_phone = ? or _id = ?) and password = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==> Parameters: 1452606865@qq.com(String), 1452606865@qq.com(String), 1452606865@qq.com(String), 582965(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]<==      Total: 1
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5259fb34]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5259fb34]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 1381628724 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 1381628724 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5259fb34]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==>  Preparing: select * from admin where (admin_email = ? or admin_phone = ? or _id = ?) and password = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==> Parameters: 1452606865@qq.com(String), 1452606865@qq.com(String), 1452606865@qq.com(String), 582965(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]<==      Total: 1
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5259fb34]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5259fb34]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 1381628724 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 1381628724 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5259fb34]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.updateAdminInfo]==>  Preparing: select update_admin(?, ?, ?, ?)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.updateAdminInfo]==> Parameters: adm582965(String), 1452606865@qq.com(String), null, Jater-朱镇涛(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.updateAdminInfo]<==      Total: 1
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5259fb34]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5259fb34]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 1381628724 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 1381628724 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5259fb34]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==>  Preparing: select * from admin where (admin_email = ? or admin_phone = ? or _id = ?) and password = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==> Parameters: 1452606865@qq.com(String), 1452606865@qq.com(String), 1452606865@qq.com(String), 582965(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]<==      Total: 1
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5259fb34]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5259fb34]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 1381628724 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 1381628724 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5259fb34]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==>  Preparing: select * from admin where (admin_email = ? or admin_phone = ? or _id = ?) and password = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==> Parameters: 1452606865@qq.com(String), 1452606865@qq.com(String), 1452606865@qq.com(String), 582965(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]<==      Total: 1
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5259fb34]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5259fb34]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 1381628724 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 1381628724 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5259fb34]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.updateAdminInfo]==>  Preparing: select update_admin(?, ?, ?, ?)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.updateAdminInfo]==> Parameters: adm582965(String), 1452606865@qq.com(String), 15920344763(String), Jater-朱镇涛(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.updateAdminInfo]<==      Total: 1
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5259fb34]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5259fb34]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 1381628724 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.logging.LogFactory]Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Created connection 1706245854.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@65b33ede]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.updateAdminExplain]==>  Preparing: update admin set explain = ? where _id = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.updateAdminExplain]==> Parameters: 我是Jater(String), adm582965(String)
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Created connection 1700856399.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@6561024f]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.updateAdminExplain]==>  Preparing: update admin set explain = ? where _id = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.updateAdminExplain]==> Parameters: 我是Jater(String), adm582965(String)
+[DEBUG][21-02-21][org.apache.ibatis.logging.LogFactory]Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Created connection 338786706.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@14317992]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.updateAdminExplain]==>  Preparing: update admin set explain = ? where _id = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.updateAdminExplain]==> Parameters: 我是Jater(String), adm582965(String)
+[DEBUG][21-02-21][org.apache.ibatis.logging.LogFactory]Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Created connection 1099784311.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@418d6077]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.updateAdminExplain]==>  Preparing: update admin set `explain` = ? where _id = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.updateAdminExplain]==> Parameters: 我是Jater(String), adm582965(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.updateAdminExplain]<==    Updates: 1
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Committing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@418d6077]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@418d6077]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@418d6077]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 1099784311 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.logging.LogFactory]Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Created connection 1021983338.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3cea3a6a]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.updateAdminExplain]==>  Preparing: update admin set `explain` = ? where _id = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.updateAdminExplain]==> Parameters: 我是Jater(String), adm582968(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.updateAdminExplain]<==    Updates: 0
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Committing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3cea3a6a]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3cea3a6a]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3cea3a6a]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 1021983338 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 1021983338 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3cea3a6a]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.updateAdminExplain]==>  Preparing: update admin set `explain` = ? where _id = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.updateAdminExplain]==> Parameters: 我不是Jater(String), adm582968(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.updateAdminExplain]<==    Updates: 0
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Committing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3cea3a6a]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3cea3a6a]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3cea3a6a]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 1021983338 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 1021983338 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3cea3a6a]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.updateAdminExplain]==>  Preparing: update admin set `explain` = ? where _id = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.updateAdminExplain]==> Parameters: (String), adm582965(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.updateAdminExplain]<==    Updates: 1
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Committing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3cea3a6a]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3cea3a6a]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3cea3a6a]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 1021983338 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 1021983338 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3cea3a6a]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.updateAdminExplain]==>  Preparing: update admin set `explain` = ? where _id = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.updateAdminExplain]==> Parameters: 我的技能java, js, android等等(String), adm582965(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.updateAdminExplain]<==    Updates: 1
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Committing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3cea3a6a]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3cea3a6a]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3cea3a6a]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 1021983338 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 1021983338 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3cea3a6a]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.updateAdminExplain]==>  Preparing: update admin set `explain` = ? where _id = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.updateAdminExplain]==> Parameters: 我的技能java, js, android等等(String), adm582965(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.updateAdminExplain]<==    Updates: 1
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Committing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3cea3a6a]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3cea3a6a]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3cea3a6a]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 1021983338 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 1021983338 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3cea3a6a]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.updateAdminExplain]==>  Preparing: update admin set `explain` = ? where _id = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.updateAdminExplain]==> Parameters: 我的技能java, js, android等等我的技能java, js, android等等我的技能java, js, android等等我的技能java, js, android等等我的技能java, js, android等等我的技能java, js, android等等我的技能java, js(String), adm582965(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.updateAdminExplain]<==    Updates: 1
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Committing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3cea3a6a]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3cea3a6a]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3cea3a6a]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 1021983338 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.logging.LogFactory]Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Created connection 471706468.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@1c1dab64]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAllAdmin]==>  Preparing: select * from admin
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAllAdmin]==> Parameters: 
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAllAdmin]<==      Total: 2
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@1c1dab64]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@1c1dab64]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 471706468 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 471706468 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@1c1dab64]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAllAdminWithoutFinder]==>  Preparing: select * from admin where _id != ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAllAdminWithoutFinder]==> Parameters: adm582965(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAllAdminWithoutFinder]<==      Total: 1
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@1c1dab64]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@1c1dab64]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 471706468 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 471706468 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@1c1dab64]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAllAdmin]==>  Preparing: select * from admin
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAllAdmin]==> Parameters: 
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAllAdmin]<==      Total: 2
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@1c1dab64]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@1c1dab64]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 471706468 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 471706468 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@1c1dab64]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAllAdmin]==>  Preparing: select * from admin
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAllAdmin]==> Parameters: 
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAllAdmin]<==      Total: 2
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@1c1dab64]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@1c1dab64]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 471706468 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 471706468 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@1c1dab64]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.updateAdminExplain]==>  Preparing: update admin set `explain` = ? where _id = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.updateAdminExplain]==> Parameters: (String), adm582965(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.updateAdminExplain]<==    Updates: 1
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Committing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@1c1dab64]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@1c1dab64]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@1c1dab64]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 471706468 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 471706468 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@1c1dab64]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAllAdmin]==>  Preparing: select * from admin
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAllAdmin]==> Parameters: 
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAllAdmin]<==      Total: 2
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@1c1dab64]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@1c1dab64]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 471706468 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.logging.LogFactory]Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Created connection 2102423568.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7d507010]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserMapper.findAllUser]==>  Preparing: select * from user limit ?, ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserMapper.findAllUser]==> Parameters: 0(Integer), 10(Integer)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserLabelMapper.findUserLabelByUserId]====>  Preparing: select * from user_label where user_id = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserLabelMapper.findUserLabelByUserId]====> Parameters: test01(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserLabelMapper.findUserLabelByUserId]<====      Total: 7
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserAuthorLikesMapper.findUserAuthorLikesAuthorIdByUserId]====>  Preparing: select author_id from user_author_likes where user_id = ? and is_like = 1
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserAuthorLikesMapper.findUserAuthorLikesAuthorIdByUserId]====> Parameters: test01(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserAuthorLikesMapper.findUserAuthorLikesAuthorIdByUserId]<====      Total: 2
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleLikesByUserId]====>  Preparing: select article_id from user_article_likes where user_id = ? and is_like = 1
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleLikesByUserId]====> Parameters: test01(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleLikesByUserId]<====      Total: 1
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleThumbsByUserId]====>  Preparing: select article_id from user_article_likes where user_id = ? and is_thumbs_up = 1
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleThumbsByUserId]====> Parameters: test01(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleThumbsByUserId]<====      Total: 1
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserArticlePersonalMapper.findUserArticlePersonalArticleIdByUserId]====>  Preparing: select article_id from user_article_personal where user_id = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserArticlePersonalMapper.findUserArticlePersonalArticleIdByUserId]====> Parameters: test01(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserArticlePersonalMapper.findUserArticlePersonalArticleIdByUserId]<====      Total: 0
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserLabelMapper.findUserLabelByUserId]====>  Preparing: select * from user_label where user_id = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserLabelMapper.findUserLabelByUserId]====> Parameters: opUg543ejq_uW-SNj-dqJbNiIEfs(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserLabelMapper.findUserLabelByUserId]<====      Total: 7
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserAuthorLikesMapper.findUserAuthorLikesAuthorIdByUserId]====>  Preparing: select author_id from user_author_likes where user_id = ? and is_like = 1
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserAuthorLikesMapper.findUserAuthorLikesAuthorIdByUserId]====> Parameters: opUg543ejq_uW-SNj-dqJbNiIEfs(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserAuthorLikesMapper.findUserAuthorLikesAuthorIdByUserId]<====      Total: 1
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleLikesByUserId]====>  Preparing: select article_id from user_article_likes where user_id = ? and is_like = 1
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleLikesByUserId]====> Parameters: opUg543ejq_uW-SNj-dqJbNiIEfs(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleLikesByUserId]<====      Total: 2
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleThumbsByUserId]====>  Preparing: select article_id from user_article_likes where user_id = ? and is_thumbs_up = 1
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleThumbsByUserId]====> Parameters: opUg543ejq_uW-SNj-dqJbNiIEfs(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleThumbsByUserId]<====      Total: 3
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserArticlePersonalMapper.findUserArticlePersonalArticleIdByUserId]====>  Preparing: select article_id from user_article_personal where user_id = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserArticlePersonalMapper.findUserArticlePersonalArticleIdByUserId]====> Parameters: opUg543ejq_uW-SNj-dqJbNiIEfs(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserArticlePersonalMapper.findUserArticlePersonalArticleIdByUserId]<====      Total: 0
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserMapper.findAllUser]<==      Total: 2
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7d507010]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7d507010]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 2102423568 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 2102423568 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7d507010]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAllAdmin]==>  Preparing: select * from admin
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAllAdmin]==> Parameters: 
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAllAdmin]<==      Total: 2
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7d507010]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7d507010]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 2102423568 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 2102423568 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7d507010]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAllAdmin]==>  Preparing: select * from admin
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAllAdmin]==> Parameters: 
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.AdminMapper.findAllAdmin]<==      Total: 2
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7d507010]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7d507010]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 2102423568 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 2102423568 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7d507010]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserMapper.findAllUser]==>  Preparing: select * from user limit ?, ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserMapper.findAllUser]==> Parameters: 0(Integer), 10(Integer)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserLabelMapper.findUserLabelByUserId]====>  Preparing: select * from user_label where user_id = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserLabelMapper.findUserLabelByUserId]====> Parameters: test01(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserLabelMapper.findUserLabelByUserId]<====      Total: 7
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserAuthorLikesMapper.findUserAuthorLikesAuthorIdByUserId]====>  Preparing: select author_id from user_author_likes where user_id = ? and is_like = 1
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserAuthorLikesMapper.findUserAuthorLikesAuthorIdByUserId]====> Parameters: test01(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserAuthorLikesMapper.findUserAuthorLikesAuthorIdByUserId]<====      Total: 2
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleLikesByUserId]====>  Preparing: select article_id from user_article_likes where user_id = ? and is_like = 1
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleLikesByUserId]====> Parameters: test01(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleLikesByUserId]<====      Total: 1
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleThumbsByUserId]====>  Preparing: select article_id from user_article_likes where user_id = ? and is_thumbs_up = 1
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleThumbsByUserId]====> Parameters: test01(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleThumbsByUserId]<====      Total: 1
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserArticlePersonalMapper.findUserArticlePersonalArticleIdByUserId]====>  Preparing: select article_id from user_article_personal where user_id = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserArticlePersonalMapper.findUserArticlePersonalArticleIdByUserId]====> Parameters: test01(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserArticlePersonalMapper.findUserArticlePersonalArticleIdByUserId]<====      Total: 0
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserLabelMapper.findUserLabelByUserId]====>  Preparing: select * from user_label where user_id = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserLabelMapper.findUserLabelByUserId]====> Parameters: opUg543ejq_uW-SNj-dqJbNiIEfs(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserLabelMapper.findUserLabelByUserId]<====      Total: 7
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserAuthorLikesMapper.findUserAuthorLikesAuthorIdByUserId]====>  Preparing: select author_id from user_author_likes where user_id = ? and is_like = 1
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserAuthorLikesMapper.findUserAuthorLikesAuthorIdByUserId]====> Parameters: opUg543ejq_uW-SNj-dqJbNiIEfs(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserAuthorLikesMapper.findUserAuthorLikesAuthorIdByUserId]<====      Total: 1
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleLikesByUserId]====>  Preparing: select article_id from user_article_likes where user_id = ? and is_like = 1
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleLikesByUserId]====> Parameters: opUg543ejq_uW-SNj-dqJbNiIEfs(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleLikesByUserId]<====      Total: 2
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleThumbsByUserId]====>  Preparing: select article_id from user_article_likes where user_id = ? and is_thumbs_up = 1
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleThumbsByUserId]====> Parameters: opUg543ejq_uW-SNj-dqJbNiIEfs(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleThumbsByUserId]<====      Total: 3
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserArticlePersonalMapper.findUserArticlePersonalArticleIdByUserId]====>  Preparing: select article_id from user_article_personal where user_id = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserArticlePersonalMapper.findUserArticlePersonalArticleIdByUserId]====> Parameters: opUg543ejq_uW-SNj-dqJbNiIEfs(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserArticlePersonalMapper.findUserArticlePersonalArticleIdByUserId]<====      Total: 0
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserMapper.findAllUser]<==      Total: 2
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7d507010]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7d507010]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 2102423568 to pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 2102423568 from pool.
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7d507010]
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserMapper.findAllUser]==>  Preparing: select * from user limit ?, ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserMapper.findAllUser]==> Parameters: 0(Integer), 10(Integer)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserLabelMapper.findUserLabelByUserId]====>  Preparing: select * from user_label where user_id = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserLabelMapper.findUserLabelByUserId]====> Parameters: test01(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserLabelMapper.findUserLabelByUserId]<====      Total: 7
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserAuthorLikesMapper.findUserAuthorLikesAuthorIdByUserId]====>  Preparing: select author_id from user_author_likes where user_id = ? and is_like = 1
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserAuthorLikesMapper.findUserAuthorLikesAuthorIdByUserId]====> Parameters: test01(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserAuthorLikesMapper.findUserAuthorLikesAuthorIdByUserId]<====      Total: 2
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleLikesByUserId]====>  Preparing: select article_id from user_article_likes where user_id = ? and is_like = 1
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleLikesByUserId]====> Parameters: test01(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleLikesByUserId]<====      Total: 1
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleThumbsByUserId]====>  Preparing: select article_id from user_article_likes where user_id = ? and is_thumbs_up = 1
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleThumbsByUserId]====> Parameters: test01(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleThumbsByUserId]<====      Total: 1
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserArticlePersonalMapper.findUserArticlePersonalArticleIdByUserId]====>  Preparing: select article_id from user_article_personal where user_id = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserArticlePersonalMapper.findUserArticlePersonalArticleIdByUserId]====> Parameters: test01(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserArticlePersonalMapper.findUserArticlePersonalArticleIdByUserId]<====      Total: 0
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserLabelMapper.findUserLabelByUserId]====>  Preparing: select * from user_label where user_id = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserLabelMapper.findUserLabelByUserId]====> Parameters: opUg543ejq_uW-SNj-dqJbNiIEfs(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserLabelMapper.findUserLabelByUserId]<====      Total: 7
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserAuthorLikesMapper.findUserAuthorLikesAuthorIdByUserId]====>  Preparing: select author_id from user_author_likes where user_id = ? and is_like = 1
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserAuthorLikesMapper.findUserAuthorLikesAuthorIdByUserId]====> Parameters: opUg543ejq_uW-SNj-dqJbNiIEfs(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserAuthorLikesMapper.findUserAuthorLikesAuthorIdByUserId]<====      Total: 1
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleLikesByUserId]====>  Preparing: select article_id from user_article_likes where user_id = ? and is_like = 1
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleLikesByUserId]====> Parameters: opUg543ejq_uW-SNj-dqJbNiIEfs(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleLikesByUserId]<====      Total: 2
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleThumbsByUserId]====>  Preparing: select article_id from user_article_likes where user_id = ? and is_thumbs_up = 1
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleThumbsByUserId]====> Parameters: opUg543ejq_uW-SNj-dqJbNiIEfs(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleThumbsByUserId]<====      Total: 3
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserArticlePersonalMapper.findUserArticlePersonalArticleIdByUserId]====>  Preparing: select article_id from user_article_personal where user_id = ?
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserArticlePersonalMapper.findUserArticlePersonalArticleIdByUserId]====> Parameters: opUg543ejq_uW-SNj-dqJbNiIEfs(String)
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserArticlePersonalMapper.findUserArticlePersonalArticleIdByUserId]<====      Total: 0
+[DEBUG][21-02-21][cn.jater.graduation.forum.mapper.UserMapper.findAllUser]<==      Total: 2
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7d507010]
+[DEBUG][21-02-21][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7d507010]
+[DEBUG][21-02-21][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 2102423568 to pool.
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-22][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 2102423568 from pool.
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7d507010]
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserMapper.findAllUser]==>  Preparing: select * from user limit ?, ?
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserMapper.findAllUser]==> Parameters: 0(Integer), 10(Integer)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserLabelMapper.findUserLabelByUserId]====>  Preparing: select * from user_label where user_id = ?
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserLabelMapper.findUserLabelByUserId]====> Parameters: test01(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserLabelMapper.findUserLabelByUserId]<====      Total: 7
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserAuthorLikesMapper.findUserAuthorLikesAuthorIdByUserId]====>  Preparing: select author_id from user_author_likes where user_id = ? and is_like = 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserAuthorLikesMapper.findUserAuthorLikesAuthorIdByUserId]====> Parameters: test01(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserAuthorLikesMapper.findUserAuthorLikesAuthorIdByUserId]<====      Total: 2
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleLikesByUserId]====>  Preparing: select article_id from user_article_likes where user_id = ? and is_like = 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleLikesByUserId]====> Parameters: test01(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleLikesByUserId]<====      Total: 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleThumbsByUserId]====>  Preparing: select article_id from user_article_likes where user_id = ? and is_thumbs_up = 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleThumbsByUserId]====> Parameters: test01(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleThumbsByUserId]<====      Total: 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticlePersonalMapper.findUserArticlePersonalArticleIdByUserId]====>  Preparing: select article_id from user_article_personal where user_id = ?
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticlePersonalMapper.findUserArticlePersonalArticleIdByUserId]====> Parameters: test01(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticlePersonalMapper.findUserArticlePersonalArticleIdByUserId]<====      Total: 0
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserLabelMapper.findUserLabelByUserId]====>  Preparing: select * from user_label where user_id = ?
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserLabelMapper.findUserLabelByUserId]====> Parameters: opUg543ejq_uW-SNj-dqJbNiIEfs(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserLabelMapper.findUserLabelByUserId]<====      Total: 7
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserAuthorLikesMapper.findUserAuthorLikesAuthorIdByUserId]====>  Preparing: select author_id from user_author_likes where user_id = ? and is_like = 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserAuthorLikesMapper.findUserAuthorLikesAuthorIdByUserId]====> Parameters: opUg543ejq_uW-SNj-dqJbNiIEfs(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserAuthorLikesMapper.findUserAuthorLikesAuthorIdByUserId]<====      Total: 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleLikesByUserId]====>  Preparing: select article_id from user_article_likes where user_id = ? and is_like = 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleLikesByUserId]====> Parameters: opUg543ejq_uW-SNj-dqJbNiIEfs(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleLikesByUserId]<====      Total: 2
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleThumbsByUserId]====>  Preparing: select article_id from user_article_likes where user_id = ? and is_thumbs_up = 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleThumbsByUserId]====> Parameters: opUg543ejq_uW-SNj-dqJbNiIEfs(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleThumbsByUserId]<====      Total: 3
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticlePersonalMapper.findUserArticlePersonalArticleIdByUserId]====>  Preparing: select article_id from user_article_personal where user_id = ?
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticlePersonalMapper.findUserArticlePersonalArticleIdByUserId]====> Parameters: opUg543ejq_uW-SNj-dqJbNiIEfs(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticlePersonalMapper.findUserArticlePersonalArticleIdByUserId]<====      Total: 0
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserMapper.findAllUser]<==      Total: 2
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7d507010]
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7d507010]
+[DEBUG][21-02-22][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 2102423568 to pool.
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-22][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 2102423568 from pool.
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7d507010]
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserMapper.findAllUser]==>  Preparing: select * from user limit ?, ?
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserMapper.findAllUser]==> Parameters: 0(Integer), 10(Integer)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserLabelMapper.findUserLabelByUserId]====>  Preparing: select * from user_label where user_id = ?
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserLabelMapper.findUserLabelByUserId]====> Parameters: test01(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserLabelMapper.findUserLabelByUserId]<====      Total: 7
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserAuthorLikesMapper.findUserAuthorLikesAuthorIdByUserId]====>  Preparing: select author_id from user_author_likes where user_id = ? and is_like = 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserAuthorLikesMapper.findUserAuthorLikesAuthorIdByUserId]====> Parameters: test01(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserAuthorLikesMapper.findUserAuthorLikesAuthorIdByUserId]<====      Total: 2
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleLikesByUserId]====>  Preparing: select article_id from user_article_likes where user_id = ? and is_like = 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleLikesByUserId]====> Parameters: test01(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleLikesByUserId]<====      Total: 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleThumbsByUserId]====>  Preparing: select article_id from user_article_likes where user_id = ? and is_thumbs_up = 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleThumbsByUserId]====> Parameters: test01(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleThumbsByUserId]<====      Total: 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticlePersonalMapper.findUserArticlePersonalArticleIdByUserId]====>  Preparing: select article_id from user_article_personal where user_id = ?
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticlePersonalMapper.findUserArticlePersonalArticleIdByUserId]====> Parameters: test01(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticlePersonalMapper.findUserArticlePersonalArticleIdByUserId]<====      Total: 0
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserLabelMapper.findUserLabelByUserId]====>  Preparing: select * from user_label where user_id = ?
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserLabelMapper.findUserLabelByUserId]====> Parameters: opUg543ejq_uW-SNj-dqJbNiIEfs(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserLabelMapper.findUserLabelByUserId]<====      Total: 7
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserAuthorLikesMapper.findUserAuthorLikesAuthorIdByUserId]====>  Preparing: select author_id from user_author_likes where user_id = ? and is_like = 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserAuthorLikesMapper.findUserAuthorLikesAuthorIdByUserId]====> Parameters: opUg543ejq_uW-SNj-dqJbNiIEfs(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserAuthorLikesMapper.findUserAuthorLikesAuthorIdByUserId]<====      Total: 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleLikesByUserId]====>  Preparing: select article_id from user_article_likes where user_id = ? and is_like = 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleLikesByUserId]====> Parameters: opUg543ejq_uW-SNj-dqJbNiIEfs(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleLikesByUserId]<====      Total: 2
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleThumbsByUserId]====>  Preparing: select article_id from user_article_likes where user_id = ? and is_thumbs_up = 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleThumbsByUserId]====> Parameters: opUg543ejq_uW-SNj-dqJbNiIEfs(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleThumbsByUserId]<====      Total: 3
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticlePersonalMapper.findUserArticlePersonalArticleIdByUserId]====>  Preparing: select article_id from user_article_personal where user_id = ?
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticlePersonalMapper.findUserArticlePersonalArticleIdByUserId]====> Parameters: opUg543ejq_uW-SNj-dqJbNiIEfs(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticlePersonalMapper.findUserArticlePersonalArticleIdByUserId]<====      Total: 0
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserMapper.findAllUser]<==      Total: 2
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7d507010]
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7d507010]
+[DEBUG][21-02-22][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 2102423568 to pool.
+[DEBUG][21-02-22][org.apache.ibatis.logging.LogFactory]Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+[DEBUG][21-02-22][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-22][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-22][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-22][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-22][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-22][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-22][org.apache.ibatis.datasource.pooled.PooledDataSource]Created connection 430902549.
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@19af0d15]
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.AdminMapper.createAdmin]==>  Preparing: select create_admin(?, ?, ?, ?, ?)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.AdminMapper.createAdmin]==> Parameters: adm582968(String), 1452606865@qq.com(String), FF(String), 582968(String), 1(Integer)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.AdminMapper.createAdmin]<==      Total: 1
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@19af0d15]
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@19af0d15]
+[DEBUG][21-02-22][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 430902549 to pool.
+[DEBUG][21-02-22][org.apache.ibatis.logging.LogFactory]Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+[DEBUG][21-02-22][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-22][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-22][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-22][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-22][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-22][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-22][org.apache.ibatis.datasource.pooled.PooledDataSource]Created connection 1208431416.
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@48073338]
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.AdminMapper.createAdmin]==>  Preparing: select create_admin(?, ?, ?, ?, ?)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.AdminMapper.createAdmin]==> Parameters: adm582968(String), FF(String), 1452606865@qq.com(String), 582968(String), 1(Integer)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.AdminMapper.createAdmin]<==      Total: 1
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@48073338]
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@48073338]
+[DEBUG][21-02-22][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 1208431416 to pool.
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-22][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 1208431416 from pool.
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@48073338]
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.AdminMapper.createAdmin]==>  Preparing: select create_admin(?, ?, ?, ?, ?)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.AdminMapper.createAdmin]==> Parameters: adm582968(String), FF(String), 1452606866@qq.com(String), 582968(String), 1(Integer)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.AdminMapper.createAdmin]<==      Total: 1
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@48073338]
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@48073338]
+[DEBUG][21-02-22][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 1208431416 to pool.
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-22][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 1208431416 from pool.
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@48073338]
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.AdminMapper.createAdmin]==>  Preparing: select create_admin(?, ?, ?, ?, ?)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.AdminMapper.createAdmin]==> Parameters: adm582968(String), FF(String), 1452606867@qq.com(String), 582968(String), 1(Integer)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.AdminMapper.createAdmin]<==      Total: 1
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@48073338]
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@48073338]
+[DEBUG][21-02-22][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 1208431416 to pool.
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-22][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 1208431416 from pool.
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@48073338]
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.AdminMapper.createAdmin]==>  Preparing: select create_admin(?, ?, ?, ?, ?)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.AdminMapper.createAdmin]==> Parameters: adm8myl2r2u9yo0(String), 朱镇涛(String), Jater.Zhu@tymphany.com(String), 582965(String), 1(Integer)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.AdminMapper.createAdmin]<==      Total: 1
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@48073338]
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@48073338]
+[DEBUG][21-02-22][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 1208431416 to pool.
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-22][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 1208431416 from pool.
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@48073338]
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.AdminMapper.createAdmin]==>  Preparing: select create_admin(?, ?, ?, ?, ?)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.AdminMapper.createAdmin]==> Parameters: adm8rjm00sbwno0(String), 朱镇涛(String), Jater.Zhu@tymphany.com(String), 582965(String), 1(Integer)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.AdminMapper.createAdmin]<==      Total: 1
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@48073338]
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@48073338]
+[DEBUG][21-02-22][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 1208431416 to pool.
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-22][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 1208431416 from pool.
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@48073338]
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.AdminMapper.findAllAdmin]==>  Preparing: select * from admin
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.AdminMapper.findAllAdmin]==> Parameters: 
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.AdminMapper.findAllAdmin]<==      Total: 5
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@48073338]
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@48073338]
+[DEBUG][21-02-22][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 1208431416 to pool.
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-22][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 1208431416 from pool.
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@48073338]
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserMapper.findAllUser]==>  Preparing: select * from user limit ?, ?
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserMapper.findAllUser]==> Parameters: 0(Integer), 10(Integer)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserLabelMapper.findUserLabelByUserId]====>  Preparing: select * from user_label where user_id = ?
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserLabelMapper.findUserLabelByUserId]====> Parameters: test01(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserLabelMapper.findUserLabelByUserId]<====      Total: 7
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserAuthorLikesMapper.findUserAuthorLikesAuthorIdByUserId]====>  Preparing: select author_id from user_author_likes where user_id = ? and is_like = 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserAuthorLikesMapper.findUserAuthorLikesAuthorIdByUserId]====> Parameters: test01(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserAuthorLikesMapper.findUserAuthorLikesAuthorIdByUserId]<====      Total: 2
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleLikesByUserId]====>  Preparing: select article_id from user_article_likes where user_id = ? and is_like = 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleLikesByUserId]====> Parameters: test01(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleLikesByUserId]<====      Total: 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleThumbsByUserId]====>  Preparing: select article_id from user_article_likes where user_id = ? and is_thumbs_up = 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleThumbsByUserId]====> Parameters: test01(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleThumbsByUserId]<====      Total: 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticlePersonalMapper.findUserArticlePersonalArticleIdByUserId]====>  Preparing: select article_id from user_article_personal where user_id = ?
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticlePersonalMapper.findUserArticlePersonalArticleIdByUserId]====> Parameters: test01(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticlePersonalMapper.findUserArticlePersonalArticleIdByUserId]<====      Total: 0
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserLabelMapper.findUserLabelByUserId]====>  Preparing: select * from user_label where user_id = ?
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserLabelMapper.findUserLabelByUserId]====> Parameters: opUg543ejq_uW-SNj-dqJbNiIEfs(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserLabelMapper.findUserLabelByUserId]<====      Total: 7
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserAuthorLikesMapper.findUserAuthorLikesAuthorIdByUserId]====>  Preparing: select author_id from user_author_likes where user_id = ? and is_like = 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserAuthorLikesMapper.findUserAuthorLikesAuthorIdByUserId]====> Parameters: opUg543ejq_uW-SNj-dqJbNiIEfs(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserAuthorLikesMapper.findUserAuthorLikesAuthorIdByUserId]<====      Total: 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleLikesByUserId]====>  Preparing: select article_id from user_article_likes where user_id = ? and is_like = 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleLikesByUserId]====> Parameters: opUg543ejq_uW-SNj-dqJbNiIEfs(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleLikesByUserId]<====      Total: 2
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleThumbsByUserId]====>  Preparing: select article_id from user_article_likes where user_id = ? and is_thumbs_up = 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleThumbsByUserId]====> Parameters: opUg543ejq_uW-SNj-dqJbNiIEfs(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleThumbsByUserId]<====      Total: 3
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticlePersonalMapper.findUserArticlePersonalArticleIdByUserId]====>  Preparing: select article_id from user_article_personal where user_id = ?
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticlePersonalMapper.findUserArticlePersonalArticleIdByUserId]====> Parameters: opUg543ejq_uW-SNj-dqJbNiIEfs(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticlePersonalMapper.findUserArticlePersonalArticleIdByUserId]<====      Total: 0
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserMapper.findAllUser]<==      Total: 2
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@48073338]
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@48073338]
+[DEBUG][21-02-22][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 1208431416 to pool.
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-22][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 1208431416 from pool.
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@48073338]
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.AdminMapper.findAllAdmin]==>  Preparing: select * from admin
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.AdminMapper.findAllAdmin]==> Parameters: 
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.AdminMapper.findAllAdmin]<==      Total: 5
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@48073338]
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@48073338]
+[DEBUG][21-02-22][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 1208431416 to pool.
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-22][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 1208431416 from pool.
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@48073338]
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserMapper.findAllUser]==>  Preparing: select * from user limit ?, ?
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserMapper.findAllUser]==> Parameters: 0(Integer), 10(Integer)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserLabelMapper.findUserLabelByUserId]====>  Preparing: select * from user_label where user_id = ?
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserLabelMapper.findUserLabelByUserId]====> Parameters: test01(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserLabelMapper.findUserLabelByUserId]<====      Total: 7
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserAuthorLikesMapper.findUserAuthorLikesAuthorIdByUserId]====>  Preparing: select author_id from user_author_likes where user_id = ? and is_like = 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserAuthorLikesMapper.findUserAuthorLikesAuthorIdByUserId]====> Parameters: test01(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserAuthorLikesMapper.findUserAuthorLikesAuthorIdByUserId]<====      Total: 2
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleLikesByUserId]====>  Preparing: select article_id from user_article_likes where user_id = ? and is_like = 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleLikesByUserId]====> Parameters: test01(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleLikesByUserId]<====      Total: 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleThumbsByUserId]====>  Preparing: select article_id from user_article_likes where user_id = ? and is_thumbs_up = 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleThumbsByUserId]====> Parameters: test01(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleThumbsByUserId]<====      Total: 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticlePersonalMapper.findUserArticlePersonalArticleIdByUserId]====>  Preparing: select article_id from user_article_personal where user_id = ?
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticlePersonalMapper.findUserArticlePersonalArticleIdByUserId]====> Parameters: test01(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticlePersonalMapper.findUserArticlePersonalArticleIdByUserId]<====      Total: 0
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserLabelMapper.findUserLabelByUserId]====>  Preparing: select * from user_label where user_id = ?
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserLabelMapper.findUserLabelByUserId]====> Parameters: opUg543ejq_uW-SNj-dqJbNiIEfs(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserLabelMapper.findUserLabelByUserId]<====      Total: 7
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserAuthorLikesMapper.findUserAuthorLikesAuthorIdByUserId]====>  Preparing: select author_id from user_author_likes where user_id = ? and is_like = 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserAuthorLikesMapper.findUserAuthorLikesAuthorIdByUserId]====> Parameters: opUg543ejq_uW-SNj-dqJbNiIEfs(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserAuthorLikesMapper.findUserAuthorLikesAuthorIdByUserId]<====      Total: 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleLikesByUserId]====>  Preparing: select article_id from user_article_likes where user_id = ? and is_like = 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleLikesByUserId]====> Parameters: opUg543ejq_uW-SNj-dqJbNiIEfs(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleLikesByUserId]<====      Total: 2
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleThumbsByUserId]====>  Preparing: select article_id from user_article_likes where user_id = ? and is_thumbs_up = 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleThumbsByUserId]====> Parameters: opUg543ejq_uW-SNj-dqJbNiIEfs(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleThumbsByUserId]<====      Total: 3
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticlePersonalMapper.findUserArticlePersonalArticleIdByUserId]====>  Preparing: select article_id from user_article_personal where user_id = ?
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticlePersonalMapper.findUserArticlePersonalArticleIdByUserId]====> Parameters: opUg543ejq_uW-SNj-dqJbNiIEfs(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticlePersonalMapper.findUserArticlePersonalArticleIdByUserId]<====      Total: 0
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserMapper.findAllUser]<==      Total: 2
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@48073338]
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@48073338]
+[DEBUG][21-02-22][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 1208431416 to pool.
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-22][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 1208431416 from pool.
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@48073338]
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.AdminMapper.findAllAdmin]==>  Preparing: select * from admin
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.AdminMapper.findAllAdmin]==> Parameters: 
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.AdminMapper.findAllAdmin]<==      Total: 5
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@48073338]
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@48073338]
+[DEBUG][21-02-22][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 1208431416 to pool.
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-22][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 1208431416 from pool.
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@48073338]
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserMapper.findAllUser]==>  Preparing: select * from user limit ?, ?
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserMapper.findAllUser]==> Parameters: 0(Integer), 10(Integer)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserLabelMapper.findUserLabelByUserId]====>  Preparing: select * from user_label where user_id = ?
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserLabelMapper.findUserLabelByUserId]====> Parameters: test01(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserLabelMapper.findUserLabelByUserId]<====      Total: 7
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserAuthorLikesMapper.findUserAuthorLikesAuthorIdByUserId]====>  Preparing: select author_id from user_author_likes where user_id = ? and is_like = 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserAuthorLikesMapper.findUserAuthorLikesAuthorIdByUserId]====> Parameters: test01(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserAuthorLikesMapper.findUserAuthorLikesAuthorIdByUserId]<====      Total: 2
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleLikesByUserId]====>  Preparing: select article_id from user_article_likes where user_id = ? and is_like = 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleLikesByUserId]====> Parameters: test01(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleLikesByUserId]<====      Total: 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleThumbsByUserId]====>  Preparing: select article_id from user_article_likes where user_id = ? and is_thumbs_up = 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleThumbsByUserId]====> Parameters: test01(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleThumbsByUserId]<====      Total: 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticlePersonalMapper.findUserArticlePersonalArticleIdByUserId]====>  Preparing: select article_id from user_article_personal where user_id = ?
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticlePersonalMapper.findUserArticlePersonalArticleIdByUserId]====> Parameters: test01(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticlePersonalMapper.findUserArticlePersonalArticleIdByUserId]<====      Total: 0
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserLabelMapper.findUserLabelByUserId]====>  Preparing: select * from user_label where user_id = ?
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserLabelMapper.findUserLabelByUserId]====> Parameters: opUg543ejq_uW-SNj-dqJbNiIEfs(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserLabelMapper.findUserLabelByUserId]<====      Total: 7
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserAuthorLikesMapper.findUserAuthorLikesAuthorIdByUserId]====>  Preparing: select author_id from user_author_likes where user_id = ? and is_like = 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserAuthorLikesMapper.findUserAuthorLikesAuthorIdByUserId]====> Parameters: opUg543ejq_uW-SNj-dqJbNiIEfs(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserAuthorLikesMapper.findUserAuthorLikesAuthorIdByUserId]<====      Total: 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleLikesByUserId]====>  Preparing: select article_id from user_article_likes where user_id = ? and is_like = 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleLikesByUserId]====> Parameters: opUg543ejq_uW-SNj-dqJbNiIEfs(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleLikesByUserId]<====      Total: 2
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleThumbsByUserId]====>  Preparing: select article_id from user_article_likes where user_id = ? and is_thumbs_up = 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleThumbsByUserId]====> Parameters: opUg543ejq_uW-SNj-dqJbNiIEfs(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleThumbsByUserId]<====      Total: 3
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticlePersonalMapper.findUserArticlePersonalArticleIdByUserId]====>  Preparing: select article_id from user_article_personal where user_id = ?
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticlePersonalMapper.findUserArticlePersonalArticleIdByUserId]====> Parameters: opUg543ejq_uW-SNj-dqJbNiIEfs(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticlePersonalMapper.findUserArticlePersonalArticleIdByUserId]<====      Total: 0
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserMapper.findAllUser]<==      Total: 2
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@48073338]
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@48073338]
+[DEBUG][21-02-22][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 1208431416 to pool.
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-22][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 1208431416 from pool.
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@48073338]
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.AdminMapper.findAllAdmin]==>  Preparing: select * from admin
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.AdminMapper.findAllAdmin]==> Parameters: 
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.AdminMapper.findAllAdmin]<==      Total: 5
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@48073338]
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@48073338]
+[DEBUG][21-02-22][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 1208431416 to pool.
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-22][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 1208431416 from pool.
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@48073338]
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserMapper.findAllUser]==>  Preparing: select * from user limit ?, ?
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserMapper.findAllUser]==> Parameters: 0(Integer), 10(Integer)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserLabelMapper.findUserLabelByUserId]====>  Preparing: select * from user_label where user_id = ?
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserLabelMapper.findUserLabelByUserId]====> Parameters: test01(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserLabelMapper.findUserLabelByUserId]<====      Total: 7
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserAuthorLikesMapper.findUserAuthorLikesAuthorIdByUserId]====>  Preparing: select author_id from user_author_likes where user_id = ? and is_like = 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserAuthorLikesMapper.findUserAuthorLikesAuthorIdByUserId]====> Parameters: test01(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserAuthorLikesMapper.findUserAuthorLikesAuthorIdByUserId]<====      Total: 2
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleLikesByUserId]====>  Preparing: select article_id from user_article_likes where user_id = ? and is_like = 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleLikesByUserId]====> Parameters: test01(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleLikesByUserId]<====      Total: 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleThumbsByUserId]====>  Preparing: select article_id from user_article_likes where user_id = ? and is_thumbs_up = 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleThumbsByUserId]====> Parameters: test01(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleThumbsByUserId]<====      Total: 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticlePersonalMapper.findUserArticlePersonalArticleIdByUserId]====>  Preparing: select article_id from user_article_personal where user_id = ?
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticlePersonalMapper.findUserArticlePersonalArticleIdByUserId]====> Parameters: test01(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticlePersonalMapper.findUserArticlePersonalArticleIdByUserId]<====      Total: 0
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserLabelMapper.findUserLabelByUserId]====>  Preparing: select * from user_label where user_id = ?
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserLabelMapper.findUserLabelByUserId]====> Parameters: opUg543ejq_uW-SNj-dqJbNiIEfs(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserLabelMapper.findUserLabelByUserId]<====      Total: 7
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserAuthorLikesMapper.findUserAuthorLikesAuthorIdByUserId]====>  Preparing: select author_id from user_author_likes where user_id = ? and is_like = 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserAuthorLikesMapper.findUserAuthorLikesAuthorIdByUserId]====> Parameters: opUg543ejq_uW-SNj-dqJbNiIEfs(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserAuthorLikesMapper.findUserAuthorLikesAuthorIdByUserId]<====      Total: 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleLikesByUserId]====>  Preparing: select article_id from user_article_likes where user_id = ? and is_like = 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleLikesByUserId]====> Parameters: opUg543ejq_uW-SNj-dqJbNiIEfs(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleLikesByUserId]<====      Total: 2
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleThumbsByUserId]====>  Preparing: select article_id from user_article_likes where user_id = ? and is_thumbs_up = 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleThumbsByUserId]====> Parameters: opUg543ejq_uW-SNj-dqJbNiIEfs(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleThumbsByUserId]<====      Total: 3
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticlePersonalMapper.findUserArticlePersonalArticleIdByUserId]====>  Preparing: select article_id from user_article_personal where user_id = ?
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticlePersonalMapper.findUserArticlePersonalArticleIdByUserId]====> Parameters: opUg543ejq_uW-SNj-dqJbNiIEfs(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticlePersonalMapper.findUserArticlePersonalArticleIdByUserId]<====      Total: 0
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserMapper.findAllUser]<==      Total: 2
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@48073338]
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@48073338]
+[DEBUG][21-02-22][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 1208431416 to pool.
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-22][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 1208431416 from pool.
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@48073338]
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.AdminMapper.findAllAdmin]==>  Preparing: select * from admin
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.AdminMapper.findAllAdmin]==> Parameters: 
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.AdminMapper.findAllAdmin]<==      Total: 5
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@48073338]
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@48073338]
+[DEBUG][21-02-22][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 1208431416 to pool.
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-22][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 1208431416 from pool.
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@48073338]
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserMapper.findAllUser]==>  Preparing: select * from user limit ?, ?
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserMapper.findAllUser]==> Parameters: 0(Integer), 10(Integer)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserLabelMapper.findUserLabelByUserId]====>  Preparing: select * from user_label where user_id = ?
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserLabelMapper.findUserLabelByUserId]====> Parameters: test01(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserLabelMapper.findUserLabelByUserId]<====      Total: 7
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserAuthorLikesMapper.findUserAuthorLikesAuthorIdByUserId]====>  Preparing: select author_id from user_author_likes where user_id = ? and is_like = 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserAuthorLikesMapper.findUserAuthorLikesAuthorIdByUserId]====> Parameters: test01(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserAuthorLikesMapper.findUserAuthorLikesAuthorIdByUserId]<====      Total: 2
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleLikesByUserId]====>  Preparing: select article_id from user_article_likes where user_id = ? and is_like = 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleLikesByUserId]====> Parameters: test01(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleLikesByUserId]<====      Total: 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleThumbsByUserId]====>  Preparing: select article_id from user_article_likes where user_id = ? and is_thumbs_up = 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleThumbsByUserId]====> Parameters: test01(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleThumbsByUserId]<====      Total: 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticlePersonalMapper.findUserArticlePersonalArticleIdByUserId]====>  Preparing: select article_id from user_article_personal where user_id = ?
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticlePersonalMapper.findUserArticlePersonalArticleIdByUserId]====> Parameters: test01(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticlePersonalMapper.findUserArticlePersonalArticleIdByUserId]<====      Total: 0
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserLabelMapper.findUserLabelByUserId]====>  Preparing: select * from user_label where user_id = ?
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserLabelMapper.findUserLabelByUserId]====> Parameters: opUg543ejq_uW-SNj-dqJbNiIEfs(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserLabelMapper.findUserLabelByUserId]<====      Total: 7
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserAuthorLikesMapper.findUserAuthorLikesAuthorIdByUserId]====>  Preparing: select author_id from user_author_likes where user_id = ? and is_like = 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserAuthorLikesMapper.findUserAuthorLikesAuthorIdByUserId]====> Parameters: opUg543ejq_uW-SNj-dqJbNiIEfs(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserAuthorLikesMapper.findUserAuthorLikesAuthorIdByUserId]<====      Total: 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleLikesByUserId]====>  Preparing: select article_id from user_article_likes where user_id = ? and is_like = 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleLikesByUserId]====> Parameters: opUg543ejq_uW-SNj-dqJbNiIEfs(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleLikesByUserId]<====      Total: 2
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleThumbsByUserId]====>  Preparing: select article_id from user_article_likes where user_id = ? and is_thumbs_up = 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleThumbsByUserId]====> Parameters: opUg543ejq_uW-SNj-dqJbNiIEfs(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleThumbsByUserId]<====      Total: 3
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticlePersonalMapper.findUserArticlePersonalArticleIdByUserId]====>  Preparing: select article_id from user_article_personal where user_id = ?
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticlePersonalMapper.findUserArticlePersonalArticleIdByUserId]====> Parameters: opUg543ejq_uW-SNj-dqJbNiIEfs(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticlePersonalMapper.findUserArticlePersonalArticleIdByUserId]<====      Total: 0
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserMapper.findAllUser]<==      Total: 2
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@48073338]
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@48073338]
+[DEBUG][21-02-22][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 1208431416 to pool.
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-22][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 1208431416 from pool.
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@48073338]
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.AdminMapper.findAllAdmin]==>  Preparing: select * from admin
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.AdminMapper.findAllAdmin]==> Parameters: 
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.AdminMapper.findAllAdmin]<==      Total: 5
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@48073338]
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@48073338]
+[DEBUG][21-02-22][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 1208431416 to pool.
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-22][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 1208431416 from pool.
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@48073338]
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserMapper.findAllUser]==>  Preparing: select * from user limit ?, ?
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserMapper.findAllUser]==> Parameters: 0(Integer), 10(Integer)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserLabelMapper.findUserLabelByUserId]====>  Preparing: select * from user_label where user_id = ?
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserLabelMapper.findUserLabelByUserId]====> Parameters: test01(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserLabelMapper.findUserLabelByUserId]<====      Total: 7
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserAuthorLikesMapper.findUserAuthorLikesAuthorIdByUserId]====>  Preparing: select author_id from user_author_likes where user_id = ? and is_like = 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserAuthorLikesMapper.findUserAuthorLikesAuthorIdByUserId]====> Parameters: test01(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserAuthorLikesMapper.findUserAuthorLikesAuthorIdByUserId]<====      Total: 2
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleLikesByUserId]====>  Preparing: select article_id from user_article_likes where user_id = ? and is_like = 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleLikesByUserId]====> Parameters: test01(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleLikesByUserId]<====      Total: 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleThumbsByUserId]====>  Preparing: select article_id from user_article_likes where user_id = ? and is_thumbs_up = 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleThumbsByUserId]====> Parameters: test01(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleThumbsByUserId]<====      Total: 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticlePersonalMapper.findUserArticlePersonalArticleIdByUserId]====>  Preparing: select article_id from user_article_personal where user_id = ?
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticlePersonalMapper.findUserArticlePersonalArticleIdByUserId]====> Parameters: test01(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticlePersonalMapper.findUserArticlePersonalArticleIdByUserId]<====      Total: 0
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserLabelMapper.findUserLabelByUserId]====>  Preparing: select * from user_label where user_id = ?
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserLabelMapper.findUserLabelByUserId]====> Parameters: opUg543ejq_uW-SNj-dqJbNiIEfs(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserLabelMapper.findUserLabelByUserId]<====      Total: 7
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserAuthorLikesMapper.findUserAuthorLikesAuthorIdByUserId]====>  Preparing: select author_id from user_author_likes where user_id = ? and is_like = 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserAuthorLikesMapper.findUserAuthorLikesAuthorIdByUserId]====> Parameters: opUg543ejq_uW-SNj-dqJbNiIEfs(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserAuthorLikesMapper.findUserAuthorLikesAuthorIdByUserId]<====      Total: 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleLikesByUserId]====>  Preparing: select article_id from user_article_likes where user_id = ? and is_like = 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleLikesByUserId]====> Parameters: opUg543ejq_uW-SNj-dqJbNiIEfs(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleLikesByUserId]<====      Total: 2
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleThumbsByUserId]====>  Preparing: select article_id from user_article_likes where user_id = ? and is_thumbs_up = 1
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleThumbsByUserId]====> Parameters: opUg543ejq_uW-SNj-dqJbNiIEfs(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticleLikesMapper.findUserArticleThumbsByUserId]<====      Total: 3
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticlePersonalMapper.findUserArticlePersonalArticleIdByUserId]====>  Preparing: select article_id from user_article_personal where user_id = ?
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticlePersonalMapper.findUserArticlePersonalArticleIdByUserId]====> Parameters: opUg543ejq_uW-SNj-dqJbNiIEfs(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserArticlePersonalMapper.findUserArticlePersonalArticleIdByUserId]<====      Total: 0
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.UserMapper.findAllUser]<==      Total: 2
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@48073338]
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@48073338]
+[DEBUG][21-02-22][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 1208431416 to pool.
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-22][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 1208431416 from pool.
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@48073338]
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==>  Preparing: select * from admin where (admin_email = ? or admin_phone = ? or _id = ?) and password = ?
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==> Parameters: 1452606866@qq.com(String), 1452606866@qq.com(String), 1452606866@qq.com(String), 582966(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]<==      Total: 0
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@48073338]
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@48073338]
+[DEBUG][21-02-22][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 1208431416 to pool.
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-02-22][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 1208431416 from pool.
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@48073338]
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==>  Preparing: select * from admin where (admin_email = ? or admin_phone = ? or _id = ?) and password = ?
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]==> Parameters: 1452606866@qq.com(String), 1452606866@qq.com(String), 1452606866@qq.com(String), 582965(String)
+[DEBUG][21-02-22][cn.jater.graduation.forum.mapper.AdminMapper.findAdminByLogin]<==      Total: 1
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@48073338]
+[DEBUG][21-02-22][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@48073338]
+[DEBUG][21-02-22][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 1208431416 to pool.

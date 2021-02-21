@@ -10,6 +10,6 @@ public class OSSConstant {
     public static String avatarFile = "forum-avatar/";
     public static String coverFile = "forum-cover/";
     public static String contentFile = "forum-content/";
-    public static String buckName = "objective-forum-oss";
-    public static String selfOSS = "your-bucket.oss-cn-shenzhen.aliyuncs.com/";
+    public static String buckName = "your bucket";
+    public static String selfOSS = "your bucket.oss-cn-shenzhen.aliyuncs.com/";
 }

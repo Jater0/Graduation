@@ -7,6 +7,8 @@ import cn.jater.graduation.forum.utils.mybatis.MyBatisHandler;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class UserServiceImpl implements UserService {
     @Override
@@ -26,5 +28,15 @@ public class UserServiceImpl implements UserService {
         mapper.createUser(id, name, avatar, gender);
         sqlSession.commit();
         sqlSession.close();
+    }
+
+    @Override
+    public List<User> findAllUser(int start, int pageSize) {
+        SqlSession sqlSession = MyBatisHandler.getSqlSession();
+        UserMapper mapper = sqlSession.getMapper(UserMapper.class);
+        List<User> users = mapper.findAllUser(start, pageSize);
+        sqlSession.commit();
+        sqlSession.close();
+        return users;
     }
 }
