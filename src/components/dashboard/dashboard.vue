@@ -75,8 +75,13 @@
       <Histogram
         :title="'用户浏览总量'"
         :histogramValue="histogramValue"
+        idSetter="histogram-1"
       ></Histogram>
-      <PieChart :title="'Top5 标签'" :pieValue="pipValue"></PieChart>
+      <PieChart
+        :title="'Top5 标签'"
+        :pieValue="pipValue"
+        idSetter="pie-chart-1"
+      ></PieChart>
     </div>
     <div class="row">
       <div class="col-lg-6 mb-4">

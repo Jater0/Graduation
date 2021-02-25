@@ -33,7 +33,6 @@
               class="dropdown-toggle nav-link"
               data-toggle="dropdown"
               aria-expanded="false"
-              href="#"
               ><span class="badge badge-danger badge-counter">3+</span
               ><i class="fas fa-bell fa-fw"></i
             ></a>
@@ -42,7 +41,7 @@
               role="menu"
             >
               <h6 class="dropdown-header">alerts center</h6>
-              <a class="d-flex align-items-center dropdown-item" href="#">
+              <a class="d-flex align-items-center dropdown-item">
                 <div class="mr-3">
                   <div class="bg-primary icon-circle">
                     <i class="fas fa-file-alt text-white"></i>
@@ -53,7 +52,7 @@
                   <p>A new monthly report is ready to download!</p>
                 </div>
               </a>
-              <a class="d-flex align-items-center dropdown-item" href="#">
+              <a class="d-flex align-items-center dropdown-item">
                 <div class="mr-3">
                   <div class="bg-success icon-circle">
                     <i class="fas fa-donate text-white"></i>
@@ -64,7 +63,7 @@
                   <p>$290.29 has been deposited into your account!</p>
                 </div>
               </a>
-              <a class="d-flex align-items-center dropdown-item" href="#">
+              <a class="d-flex align-items-center dropdown-item">
                 <div class="mr-3">
                   <div class="bg-warning icon-circle">
                     <i class="fas fa-exclamation-triangle text-white"></i>
@@ -77,7 +76,7 @@
                     your account.
                   </p>
                 </div> </a
-              ><a class="text-center dropdown-item small text-gray-500" href="#"
+              ><a class="text-center dropdown-item small text-gray-500"
                 >Show All Alerts</a
               >
             </div>
@@ -89,7 +88,6 @@
               class="dropdown-toggle nav-link"
               data-toggle="dropdown"
               aria-expanded="false"
-              href="#"
               ><i class="fas fa-envelope fa-fw"></i
               ><span class="badge badge-danger badge-counter">7</span></a
             >
@@ -98,7 +96,7 @@
               role="menu"
             >
               <h6 class="dropdown-header">alerts center</h6>
-              <a class="d-flex align-items-center dropdown-item" href="#">
+              <a class="d-flex align-items-center dropdown-item">
                 <div class="dropdown-list-image mr-3">
                   <img
                     class="rounded-circle"
@@ -116,7 +114,7 @@
                   <p class="small text-gray-500 mb-0">Emily Fowler - 58m</p>
                 </div>
               </a>
-              <a class="d-flex align-items-center dropdown-item" href="#">
+              <a class="d-flex align-items-center dropdown-item">
                 <div class="dropdown-list-image mr-3">
                   <img
                     class="rounded-circle"
@@ -131,7 +129,7 @@
                   <p class="small text-gray-500 mb-0">Jae Chun - 1d</p>
                 </div>
               </a>
-              <a class="d-flex align-items-center dropdown-item" href="#">
+              <a class="d-flex align-items-center dropdown-item">
                 <div class="dropdown-list-image mr-3">
                   <img
                     class="rounded-circle"
@@ -149,7 +147,7 @@
                   <p class="small text-gray-500 mb-0">Morgan Alvarez - 2d</p>
                 </div>
               </a>
-              <a class="d-flex align-items-center dropdown-item" href="#">
+              <a class="d-flex align-items-center dropdown-item">
                 <div class="dropdown-list-image mr-3">
                   <img
                     class="rounded-circle"
@@ -167,7 +165,7 @@
                   </div>
                   <p class="small text-gray-500 mb-0">Chicken the Dog · 2w</p>
                 </div> </a
-              ><a class="text-center dropdown-item small text-gray-500" href="#"
+              ><a class="text-center dropdown-item small text-gray-500"
                 >Show All Alerts</a
               >
             </div>
@@ -184,36 +182,47 @@
               class="dropdown-toggle nav-link"
               data-toggle="dropdown"
               aria-expanded="false"
-              href="#"
-              ><span class="d-none d-lg-inline mr-2 text-gray-600 small">{{
-                adminInfo.admin_name
-              }}</span
-              ><img
+            >
+              <span class="d-none d-lg-inline mr-2 text-gray-600 small">
+                {{ adminInfo.admin_name }}
+              </span>
+              <img
+                class="border rounded-circle img-profile"
+                v-if="adminInfo.avatar === null"
+                src="https://objective-forum-oss.oss-cn-shenzhen.aliyuncs.com/forum-avatar/adminDefault.png"
+              />
+              <img
+                v-else
                 class="border rounded-circle img-profile"
                 :src="adminInfo.avatar"
-            /></a>
+              />
+            </a>
             <div
               class="dropdown-menu shadow dropdown-menu-right animated--grow-in"
               role="menu"
             >
-              <a class="dropdown-item" role="presentation" href="#"
-                ><i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i
-                >&nbsp;Profile</a
-              ><a class="dropdown-item" role="presentation" href="#"
-                ><i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i
-                >&nbsp;Settings</a
+              <a
+                class="dropdown-item"
+                role="presentation"
+                @click="jumpToProfile"
               >
-              <a class="dropdown-item" role="presentation" href="#"
+                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                &nbsp;Profile
+              </a>
+              <a class="dropdown-item" role="presentation">
+                <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                &nbsp;Settings
+              </a>
+              <a class="dropdown-item" role="presentation"
                 ><i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i
                 >&nbsp;Activity log</a
               >
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" role="presentation" href="#"
-                ><i
-                  class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"
-                ></i
-                >&nbsp;Logout</a
-              >
+              <a class="dropdown-item" role="presentation" @click="logout">
+                <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400">
+                </i>
+                &nbsp;Logout
+              </a>
             </div>
           </div>
         </li>
@@ -233,10 +242,15 @@ export default {
     },
   },
   data() {
-    return {
-      avatar:
-        "https://objective-forum-oss.oss-cn-shenzhen.aliyuncs.com/forum-avatar/NV2850R4G4.png",
-    };
+    return {};
+  },
+  methods: {
+    jumpToProfile() {
+      this.$emit("jump", 2);
+    },
+    logout() {
+      this.$emit("logout");
+    },
   },
 };
 </script>

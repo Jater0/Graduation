@@ -11,7 +11,7 @@
           {{ confirmText }}
         </div>
       </div>
-      <div class="close-btn" @click="closeMask">
+      <div class="close-btn" @click="closeBtn">
         <i class="fas fa-times"></i>
       </div>
     </div>
@@ -96,6 +96,7 @@ export default {
   .dialog-container {
     width: 500px;
     height: 380px;
+    overflow-y: scroll;
     background: #ffffff;
     position: absolute;
     top: 50%;
@@ -117,6 +118,8 @@ export default {
       line-height: 26px;
       padding: 0 20px;
       box-sizing: border-box;
+      word-break: break-all;
+      white-space: normal;
     }
     .inp {
       margin: 10px 0 0 20px;

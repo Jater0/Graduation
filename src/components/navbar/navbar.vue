@@ -13,8 +13,8 @@
         <div class="sidebar-brand-text mx-3"><span>Objective-Admin</span></div>
       </a>
       <hr class="sidebar-divider my-0" />
-      <ul class="nav navbar-nav text-light" id="accordionSidebar">
-        <li class="nav-item" role="presentation">
+      <ul class="nav navbar-nav text-light">
+        <li class="nav-item" role="presentation" v-if="showDashboard">
           <a
             class="nav-link"
             :class="activeIndex === 1 ? 'active' : ''"
@@ -25,7 +25,7 @@
             <span>数据中心</span>
           </a>
         </li>
-        <li class="nav-item" role="presentation">
+        <li class="nav-item" role="presentation" v-if="showProfile">
           <a
             class="nav-link"
             :class="activeIndex === 2 ? 'active' : ''"
@@ -36,7 +36,7 @@
             <span>个人信息</span>
           </a>
         </li>
-        <li class="nav-item" role="presentation">
+        <li class="nav-item" role="presentation" v-if="showAdmins">
           <a
             class="nav-link"
             :class="activeIndex === 3 ? 'active' : ''"
@@ -47,7 +47,7 @@
             <span>管理员列表</span>
           </a>
         </li>
-        <li class="nav-item" role="presentation">
+        <li class="nav-item" role="presentation" v-if="showUsers">
           <a
             class="nav-link"
             :class="activeIndex === 4 ? 'active' : ''"
@@ -58,7 +58,7 @@
             <span>用户列表</span>
           </a>
         </li>
-        <li class="nav-item" role="presentation" v-if="level === 0">
+        <li class="nav-item" role="presentation" v-if="showRegister">
           <a
             class="nav-link"
             :class="activeIndex === 5 ? 'active' : ''"
@@ -69,7 +69,7 @@
             <span>添加管理员</span>
           </a>
         </li>
-        <li class="nav-item" role="presentation">
+        <li class="nav-item" role="presentation" v-if="showEditArticle">
           <a
             class="nav-link"
             :class="activeIndex === 6 ? 'active' : ''"
@@ -77,15 +77,26 @@
             @click="open(6)"
           >
             <i class="fas fa-sticky-note"></i>
-            <span>编辑</span>
+            <span>文章编辑</span>
           </a>
         </li>
-        <li class="nav-item" role="presentation">
+        <li class="nav-item" role="presentation" v-if="showEditTopic">
           <a
             class="nav-link"
             :class="activeIndex === 7 ? 'active' : ''"
             id="editor_url"
             @click="open(7)"
+          >
+            <i class="fas fa-sticky-note"></i>
+            <span>话题编辑</span>
+          </a>
+        </li>
+        <li class="nav-item" role="presentation" v-if="showFeedback">
+          <a
+            class="nav-link"
+            :class="activeIndex === 8 ? 'active' : ''"
+            id="editor_url"
+            @click="open(8)"
           >
             <i class="fas fa-sticky-note"></i>
             <span>用户反馈</span>
@@ -103,10 +114,36 @@ export default {
       type: Number,
       default: 0,
     },
+    adminInfo: {
+      type: Object,
+      default() {
+        return {};
+      },
+    },
+  },
+  created() {
+    this.action = this.adminInfo.action;
+    this.showDashboard = this.action.includes("1");
+    this.showProfile = this.action.includes("2");
+    this.showAdmins = this.action.includes("3");
+    this.showUsers = this.action.includes("4");
+    this.showRegister = this.action.includes("5");
+    this.showEditArticle = this.action.includes("6");
+    this.showEditTopic = this.action.includes("7");
+    this.showFeedback = this.action.includes("8");
   },
   data() {
     return {
       activeIndex: 1,
+      action: "",
+      showDashboard: false,
+      showProfile: false,
+      showAdmins: false,
+      showUsers: false,
+      showRegister: false,
+      showEditArticle: false,
+      showEditTopic: false,
+      showFeedback: false,
     };
   },
   methods: {

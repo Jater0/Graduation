@@ -41,12 +41,14 @@ export default {
   background: rgba(0, 0, 0, 0.6);
   z-index: 9999;
   .dialog-container {
-    width: 500px;
-    height: 380px;
+    width: 300px;
+    height: 300px;
     background: #ffffff;
     position: absolute;
     top: 50%;
     left: 50%;
+    align-content: center;
+    justify-content: center;
     transform: translate(-50%, -50%);
     border-radius: 8px;
     position: relative;

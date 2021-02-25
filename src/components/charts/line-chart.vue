@@ -7,7 +7,7 @@
         <h6 class="text-primary font-weight-bold m-0">用户浏览总量</h6>
       </div>
       <div class="card-body">
-        <div id="line-card" :style="{ width: '500px', height: '450px' }"></div>
+        <div :id="idSetter" :style="{ width: '100%', height: '450px' }"></div>
       </div>
     </div>
   </div>
@@ -26,13 +26,17 @@ export default {
         return {};
       },
     },
+    idSetter: {
+      type: String,
+      default: "",
+    },
   },
   mounted() {
     this.drawLineChart(this.lineValue);
   },
   methods: {
     drawLineChart(data) {
-      let pieChart = this.$echarts.init(document.getElementById("line-card"));
+      let pieChart = this.$echarts.init(document.getElementById(this.idSetter));
       pieChart.setOption({
         xAxis: {
           type: "category",

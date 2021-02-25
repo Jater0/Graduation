@@ -12,9 +12,21 @@
               height="160"
             />
             <div class="mb-3">
-              <button class="btn btn-primary btn-sm" type="button">
-                Change Photo
-              </button>
+              <input
+                type="file"
+                name="avatar-change"
+                id="avatar-change"
+                class="btn btn-primary btn-sm"
+                style="display: none"
+                accept=".jpg, .jpeg, .png"
+                @change="changeAvatar"
+              />
+              <input
+                class="btn btn-primary btn-sm"
+                type="button"
+                value="更新头像"
+                @click="changeCheck"
+              />
             </div>
           </div>
         </div>
@@ -97,44 +109,6 @@
         </div>
       </div>
       <div class="col-lg-8">
-        <div class="row mb-3 d-none">
-          <div class="col">
-            <div class="card text-white bg-primary shadow">
-              <div class="card-body">
-                <div class="row mb-2">
-                  <div class="col">
-                    <p class="m-0">Peformance</p>
-                    <p class="m-0"><strong>65.2%</strong></p>
-                  </div>
-                  <div class="col-auto">
-                    <i class="fas fa-rocket fa-2x"></i>
-                  </div>
-                </div>
-                <p class="text-white-50 small m-0">
-                  <i class="fas fa-arrow-up"></i>&nbsp;5% since last month
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card text-white bg-success shadow">
-              <div class="card-body">
-                <div class="row mb-2">
-                  <div class="col">
-                    <p class="m-0">Peformance</p>
-                    <p class="m-0"><strong>65.2%</strong></p>
-                  </div>
-                  <div class="col-auto">
-                    <i class="fas fa-rocket fa-2x"></i>
-                  </div>
-                </div>
-                <p class="text-white-50 small m-0">
-                  <i class="fas fa-arrow-up"></i>&nbsp;5% since last month
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
         <div class="row">
           <div class="col">
             <div class="card shadow mb-3">
@@ -171,11 +145,10 @@
                   <div class="form-row">
                     <div class="col">
                       <div class="form-group">
-                        <label for="first_name"
-                          ><strong
-                            >用户名: {{ adminInfo.admin_name }}</strong
-                          ></label
-                        ><input
+                        <label for="first_name">
+                          <strong> 用户名: {{ adminInfo.admin_name }} </strong>
+                        </label>
+                        <input
                           v-if="showUpdateInfo"
                           class="form-control"
                           type="text"
@@ -219,6 +192,65 @@
                     >
                       取消
                     </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card shadow mb-3">
+              <div class="card-header py-3">
+                <p class="text-primary m-0 font-weight-bold">
+                  管理员其他信息(点击修改)
+                </p>
+              </div>
+              <div class="card-body">
+                <div>
+                  <div class="form-row">
+                    <div class="col">
+                      <div class="form-group">
+                        <label for="role-level">
+                          <strong>
+                            权限等级: {{ adminInfo.professional }}
+                          </strong>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="form-group">
+                        <label for="gender" style="margin-right: 10px">
+                          <strong>性别: {{ adminInfo.gender }}</strong>
+                        </label>
+                        <select
+                          id="select-option"
+                          class="form-control form-control-sm custom-select custom-select-sm"
+                          style="width: 30%"
+                        >
+                          <option value="null" selected>选择性别类型</option>
+                          <option value="男">男</option>
+                          <option value="女">女</option>
+                        </select>
+                        <button
+                          type="default"
+                          class="btn btn-primary btn-sm"
+                          style="margin-left: 10px"
+                          @click="updateGender"
+                        >
+                          更新
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="col">
+                      <div class="form-group">
+                        <label for="role-action">
+                          <strong>我能干什么: </strong>
+                        </label>
+                        <br />
+                        <label>
+                          {{ actionList }}
+                        </label>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -297,6 +329,23 @@
       @confirm="clickConfirmError"
       confirmText="确认"
     ></Dialog>
+    <Dialog
+      v-model="showUpdateAvatarStatus"
+      type="confirm"
+      title="头像更新反馈"
+      :content="showUpdateAvatarStatusContent"
+      @cancel="closeDialogUpdateAvatarStatus"
+      @confirm="closeDialogUpdateAvatarStatus"
+    >
+    </Dialog>
+    <Dialog
+      v-model="showUpdateGenderStatus"
+      type="confirm"
+      title="性别更新反馈"
+      :content="showUpdateGenderStatusContent"
+      @cancel="closeDialogUpdateGenderStatus"
+      @confirm="closeDialogUpdateGenderStatus"
+    ></Dialog>
     <LoadingDialog v-if="showLoadingDialog"></LoadingDialog>
   </div>
 </template>
@@ -304,6 +353,7 @@
 <script>
 import Dialog from "@/components/dialog/dialog.vue";
 import LoadingDialog from "@/components/loading-dialog/loading-dialog.vue";
+import { uploadOSS } from "@/server/oss";
 export default {
   components: {
     Dialog,
@@ -317,6 +367,9 @@ export default {
       },
     },
   },
+  created() {
+    this.analysisAction();
+  },
   data() {
     return {
       showUpdateInfo: false,
@@ -327,7 +380,24 @@ export default {
       email: "",
       phone: "",
       name: "",
+      gender: "",
       signatureContent: "",
+      localAvatar: "",
+      showUpdateAvatarStatus: false,
+      showUpdateAvatarStatusContent: "",
+      showUpdateGenderStatus: false,
+      showUpdateGenderStatusContent: "",
+      actionList: [],
+      actionDo: {
+        1: "数据中心",
+        2: "个人信息",
+        3: "管理员列表",
+        4: "用户列表",
+        5: "添加管理员",
+        6: "文章编辑",
+        7: "话题编辑",
+        8: "用户反馈",
+      },
     };
   },
   methods: {
@@ -379,6 +449,10 @@ export default {
           const { code } = result.data;
           if (code === 200) {
             this.adminInfo.explain = this.signatureContent;
+            this.$store.dispatch(
+              "set_adminInfo",
+              JSON.stringify(this.adminInfo)
+            );
             this.showSignatureEditor = !this.showSignatureEditor;
           } else {
           }
@@ -402,6 +476,103 @@ export default {
     },
     cancel() {
       this.showUpdateInfo = !this.showUpdateInfo;
+    },
+    async changeAvatar() {
+      this.showLoadingDialog = true;
+      const files = document.getElementById("avatar-change");
+      if (files.files) {
+        const fileLen = files.files;
+        if (fileLen.length === 0) return;
+        const file = fileLen[0];
+        var data = await uploadOSS(file);
+        this.updateAvatar(data);
+      }
+    },
+    changeCheck() {
+      let avatar = document.getElementById("avatar-change");
+      avatar.click();
+    },
+    updateAvatar(avatar) {
+      const params = {
+        id: this.adminInfo._id,
+        avatar: avatar,
+      };
+      this.$axios
+        .post(
+          "http://localhost:8000/admin/update_avatar",
+          this.$qs.stringify(params)
+        )
+        .then((result) => {
+          this.showLoadingDialog = false;
+          const { code } = result.data;
+          if (code === 200) {
+            this.adminInfo.avatar = avatar;
+            this.$store.dispatch(
+              "set_adminInfo",
+              JSON.stringify(this.adminInfo)
+            );
+            this.showUpdateAvatarStatusContent = "更新成功";
+            this.showUpdateAvatarStatus = true;
+          } else if (code === 500) {
+            this.showUpdateAvatarStatusContent = "更新失败, 请稍后再试";
+            this.showUpdateAvatarStatus = true;
+          }
+        })
+        .catch((err) => {
+          this.showLoadingDialog = false;
+          this.showUpdateAvatarStatusContent = "更新失败, 请稍后再试";
+          this.showUpdateAvatarStatus = true;
+        });
+    },
+    closeDialogUpdateAvatarStatus() {
+      this.showUpdateAvatarStatusContent = "";
+      this.showUpdateAvatarStatus = false;
+    },
+    analysisAction() {
+      var action = this.adminInfo.action;
+      for (var i = 0; i < action.length; i++) {
+        this.actionList.push(this.actionDo[Number(action.charAt(i))]);
+      }
+    },
+    updateGender() {
+      var mySelect = document.getElementById("select-option");
+      var index = mySelect.selectedIndex;
+      var labelSelect = mySelect.options[index].value;
+      if (labelSelect === "null") {
+        this.showUpdateGenderStatusContent = "请选择性别";
+        this.showUpdateGenderStatus = true;
+        return;
+      }
+      this.showLoadingDialog = true;
+      this.$axios({
+        method: "get",
+        url: `http://localhost:8000/admin/update_gender/${this.adminInfo._id}/${labelSelect}`,
+      })
+        .then((result) => {
+          this.showLoadingDialog = false;
+          const { data, code } = result.data;
+          if (code === 200) {
+            this.adminInfo.gender = labelSelect;
+            this.$store.dispatch(
+              "set_adminInfo",
+              JSON.stringify(this.adminInfo)
+            );
+            this.showUpdateGenderStatusContent = "更新性别成功";
+            this.showUpdateGenderStatus = true;
+          } else if (code === 500) {
+            this.showUpdateGenderStatusContent = "更新性别失败";
+            this.showUpdateGenderStatus = true;
+          }
+        })
+        .catch((err) => {
+          this.showLoadingDialog = false;
+          this.showUpdateGenderStatusContent = "更新性别失败";
+          this.showUpdateGenderStatus = true;
+        });
+    },
+    closeDialogUpdateGenderStatus() {
+      this.showUpdateGenderStatusContent = "";
+      this.showUpdateGenderStatus = false;
     },
   },
 };

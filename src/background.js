@@ -1,6 +1,6 @@
 'use strict'
 
-import { app, protocol, BrowserWindow } from 'electron'
+import { app, protocol, BrowserWindow, dialog, ipcMain, ipcRenderer } from 'electron'
 import { createProtocol } from 'vue-cli-plugin-electron-builder/lib'
 import installExtension, { VUEJS_DEVTOOLS } from 'electron-devtools-installer'
 const isDevelopment = process.env.NODE_ENV !== 'production'
@@ -32,6 +32,25 @@ async function createWindow() {
     // Load the index.html when not in development
     win.loadURL('app://./index.html')
   }
+
+  ipcMain.on('choose-avatar', (event) => {
+    dialog.showOpenDialog(win, {
+      filters: [
+        {name: 'Image', extensions: ['*']}
+      ],
+      properties: [
+        'openFile'
+      ]
+    }).then((result) => {
+      const fs = require('fs')
+      fs.readFile(result.filePaths[0], (err, data) => {
+        if (err) throw err
+        console.log(data);
+      })
+    }).catch((err) => {
+      console.log(err);
+    });
+  })
 }
 
 // Quit when all windows are closed.

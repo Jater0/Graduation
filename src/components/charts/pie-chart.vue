@@ -7,7 +7,7 @@
         <h6 class="text-primary font-weight-bold m-0">{{ title }}</h6>
       </div>
       <div class="card-body">
-        <div id="pie-chart" :style="{ width: '300px', height: '300px' }"></div>
+        <div :id="idSetter" :style="{ width: '100%', height: '450px' }"></div>
       </div>
     </div>
   </div>
@@ -26,6 +26,10 @@ export default {
         return [];
       },
     },
+    idSetter: {
+      type: String,
+      default: "",
+    },
   },
   data() {
     return {};
@@ -35,7 +39,7 @@ export default {
   },
   methods: {
     drawLine(data) {
-      let pieChart = this.$echarts.init(document.getElementById("pie-chart"));
+      let pieChart = this.$echarts.init(document.getElementById(this.idSetter));
       pieChart.setOption({
         tooltip: {
           trigger: "item",
