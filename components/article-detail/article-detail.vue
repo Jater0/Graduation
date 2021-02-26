@@ -39,9 +39,6 @@
 				<uni-icons type="compose" size="16" color="#f07373"></uni-icons>
 			</view>
 			<view class="article-action-icons">
-				<view class="article-action-icons-box" @click="open">
-					<uni-icons type="chat" size="22" color="#f07373"></uni-icons>
-				</view>
 				<view class="article-action-icons-box" @click="likeTap(article._id)">
 					<uni-icons :type="is_like?'heart-filled':'heart'" size="22" color="#f07373"></uni-icons>
 				</view>
@@ -115,6 +112,9 @@
 			this.getContent()
 			this.getComment()
 		},
+		destroyed() {
+			clearTimeout(this.updateBrowseCount)
+		},
 		data() {
 			return {
 				noData: '<p style="text-align:center; color=#666">文章加载中...</p>',
@@ -129,7 +129,8 @@
 				create_time: 'Loading',
 				is_author_like: false,
 				is_like: false,
-				is_thumbs_up: false
+				is_thumbs_up: false,
+				updateBrowseCount: null
 			};
 		},
 		methods: {
@@ -141,6 +142,9 @@
 						success: (res) => {
 							const {data} = res
 							this.content = data
+							this.updateBrowseCount = setTimeout(()=> {
+								console.log("更新观看");
+							}, 3000)
 						},
 						fail: (res) => {
 							
@@ -168,11 +172,18 @@
 					},
 					success: (res) => {
 						if (res.data.code === 200) {
+							var userinfo = this.systemUserInfo
 							uni.hideLoading()
 							uni.$emit('update_author_follow')
 							uni.showToast({
 								title: this.is_author_like?'关注作者成功': '取消关注'
 							})
+							if (this.is_author_like) {
+								userinfo.follow_count = userinfo.follow_count + 1
+							} else {
+								userinfo.follow_count = userinfo.follow_count - 1
+							}
+							this.$store.dispatch('set_system_userinfo', userinfo)
 						} else {
 							uni.hideLoading()
 							this.is_author_like = !this.is_author_like
@@ -286,15 +297,6 @@
 					}
 				})
 			},
-			open() {
-				const query = uni.createSelectorQuery().in(this)
-				query.select('.comment').boundingClientRect(data => {
-					uni.pageScrollTo({
-						duration: 0,
-						scrollTop: data.top
-					})
-				}).exec()
-			},
 			openCommentView(data) {
 				if (this.userid === null) {
 					showLoginModel()
@@ -357,6 +359,7 @@
 			updateComment(data) {
 				uni.showLoading()
 				uni.request({
+					method: 'GET',
 					url: 'http://localhost:8000/forum/update_comment',
 					data: {
 						cid: 'cm' + getID(5),
@@ -395,7 +398,7 @@
 						this.closeCommentView()
 					}
 				})
-			}
+			},
 		}
 	}
 </script>

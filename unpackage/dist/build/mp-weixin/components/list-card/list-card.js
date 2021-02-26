@@ -1,0 +1,10 @@
+(global["webpackJsonp"]=global["webpackJsonp"]||[]).push([["components/list-card/list-card"],{2631:function(t,e,n){"use strict";n.r(e);var a=n("ac25"),i=n.n(a);for(var c in a)"default"!==c&&function(t){n.d(e,t,(function(){return a[t]}))}(c);e["default"]=i.a},6432:function(t,e,n){},a42a:function(t,e,n){"use strict";n.r(e);var a=n("e753"),i=n("2631");for(var c in i)"default"!==c&&function(t){n.d(e,t,(function(){return i[t]}))}(c);n("b896");var r,u=n("f0c5"),l=Object(u["a"])(i["default"],a["b"],a["c"],!1,null,null,null,!1,a["a"],r);e["default"]=l.exports},ac25:function(t,e,n){"use strict";(function(t){Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0;var a=function(){n.e("components/likes/likes").then(function(){return resolve(n("5c39"))}.bind(null,n)).catch(n.oe)},i={components:{Likes:a},props:{item:{type:Object,default:function(){return{}}},types:{type:String,default:""}},data:function(){return{}},methods:{openDetail:function(){var e=this.item;switch(this.$store.dispatch("set_topic_detail_cache",e),e.mode){case"article":t.navigateTo({url:"/pages/article-detail/article-detail?params="+e._id});break;case"topic":t.navigateTo({url:"/pages/topics-detail/topics-detail?params="+e._id});break;default:t.navigateTo({url:"/pages/article-detail/article-detail?params="+e._id})}}}};e.default=i}).call(this,n("543d")["default"])},b896:function(t,e,n){"use strict";var a=n("6432"),i=n.n(a);i.a},e753:function(t,e,n){"use strict";n.d(e,"b",(function(){return i})),n.d(e,"c",(function(){return c})),n.d(e,"a",(function(){return a}));var a={likes:function(){return n.e("components/likes/likes").then(n.bind(null,"5c39"))}},i=function(){var t=this,e=t.$createElement;t._self._c},c=[]}}]);
+;(global["webpackJsonp"] = global["webpackJsonp"] || []).push([
+    'components/list-card/list-card-create-component',
+    {
+        'components/list-card/list-card-create-component':(function(module, exports, __webpack_require__){
+            __webpack_require__('543d')['createComponent'](__webpack_require__("a42a"))
+        })
+    },
+    [['components/list-card/list-card-create-component']]
+]);

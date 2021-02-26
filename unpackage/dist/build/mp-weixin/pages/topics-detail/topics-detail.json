@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "",
+  "enablePullDownRefresh": false,
+  "navigationBarBackgroundColor": "#FFCCCC",
+  "usingComponents": {
+    "article-detail": "/components/article-detail/article-detail",
+    "uni-load-more": "/components/uni-load-more/uni-load-more"
+  }
+}

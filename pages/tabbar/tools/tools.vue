@@ -14,7 +14,11 @@
 			</view>
 		</view>
 	</view> -->
-	<button type="default" @click="openWriteTopicPage">Write Topic</button>
+	<view class="article">
+		<button type="default" @click="openWriteTopicPage">Write Topic</button>
+		<button type="default" @click="openWriteArticlePage">Write Article</button>
+		<button type="default" @click="openTest">Button</button>
+	</view>
 </template>
 
 <script>
@@ -38,6 +42,16 @@
 			openWriteTopicPage() {
 				uni.navigateTo({
 					url: '/pages/topic-imple/topic-imple'
+				})
+			},
+			openWriteArticlePage() {
+				uni.navigateTo({
+					url: '/pages/article-imple/article-imple?params=main'
+				})
+			},
+			openTest() {
+				uni.navigateTo({
+					url: '/pages/article-write/article-write'
 				})
 			}
 		}

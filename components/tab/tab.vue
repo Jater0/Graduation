@@ -33,7 +33,8 @@
 		},
 		data() {
 			return {
-				activeIndex: 1
+				activeIndex: 1,
+				lastClickTime: 0
 			};
 		},
 		methods: {

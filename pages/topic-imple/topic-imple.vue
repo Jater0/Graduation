@@ -61,7 +61,6 @@
 				for (var i = 0; i < this.labelAll.length; i++) {
 					this.typeArray.push(this.labelAll[i].label_name)
 				}
-				console.log(this.typeArray);
 			},
 			chooseImage() {
 				const count = 3 - this.imageList.length

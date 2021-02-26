@@ -7,12 +7,15 @@
 	import {mapState} from 'vuex'
 	export default {
 		computed: {
-			...mapState(['userid'])
+			...mapState(['userid', 'topicDetailCache'])
 		},
 		components: {
 			ArticleDetail
 		},
 		onLoad(data) {
+			uni.setNavigationBarTitle({
+				title: this.topicDetailCache.title
+			})
 			this.getArticleDetail(data.params)
 		},
 		data() {
@@ -24,18 +27,24 @@
 		methods: {
 			getArticleDetail(topic_id) {
 				uni.request({
-					url: 'http://localhost:8000/forum/get_article',
-					data: {
-						id: this.userid,
-						topic: topic_id,
-						page: 1,
-						size: 1
-					},
+					method: 'GET',
+					url: this.$api.address + `forum/get_article/${this.userid}/${topic_id}/1/1`,
 					success: (res) => {
-						this.article = res.data.data[0]
-						this.title = this.article.title
-						uni.setNavigationBarTitle({
-							title: this.title
+						const {data, code} = res.data
+						this.$store.dispatch('clear_topic_detail_cache')
+						if (code === 200) {
+							this.article = data[0]
+						} else if (code === 500) {
+							uni.showToast({
+								title: '获取文章失败',
+								icon: 'none'
+							})
+						}
+					},
+					fail: (err) => {
+						uni.showToast({
+							title: '获取文章失败',
+							icon: 'none'
 						})
 					}
 				})

@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/tabbar/index/index",
+    "pages/tabbar/tools/tools",
+    "pages/tabbar/my/my",
+    "pages/home-search/home-search",
+    "pages/home-label/home-label",
+    "pages/feedback/feedback",
+    "pages/article-detail/article-detail",
+    "pages/topics-detail/topics-detail",
+    "pages/topic-imple/topic-imple",
+    "pages/article-imple/article-imple",
+    "pages/article-list/article-list"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#666",
+    "selectedColor": "#f07373",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/tabbar/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/tabbar/tools/tools",
+        "text": "更多"
+      },
+      {
+        "pagePath": "pages/tabbar/my/my",
+        "text": "我的"
+      }
+    ]
+  },
+  "usingComponents": {}
+}

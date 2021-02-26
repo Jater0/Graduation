@@ -1,13 +1,15 @@
 <template>
 	<view @click="openDetail">
-		<!-- article模式 -->
-		<view class="list-card mode-cloumn" v-if="item.mode === 'article'">
+		<view class="list-card" :class="(item.cover.length === 1)?'mode-image':'mode-cloumn'">
+			<view class="list-card-image" v-if="item.cover.length === 1">
+				<image :src="item.cover[0]" mode="aspectFill"></image>
+			</view>
 			<view class="list-card-content">
 				<view class="list-card-content-title">
 					<text>{{item.title}}</text>
-					<likes :item="item" :types="types"></likes>
+					<likes :item="item" :types="types" v-if="item.mode === 'article'"></likes>
 				</view>
-				<view class="list-card-image" v-if="item.cover.length !== 0">
+				<view class="list-card-image" v-if="item.cover.length > 1">
 					<view v-if="index < 3" v-for="(image, index) in item.cover" :key="index" class="list-card-image-item">
 						<image :src="image" mode="aspectFill"></image>
 					</view>
@@ -15,20 +17,21 @@
 				<view class="list-card-content-des">
 					<view class="list-card-content-des-label">
 						<view class="list-card-content-des-label-item">{{item.classify}}</view>
-						<view class="list-card-content-des-label-item">文章</view>
+						<view class="list-card-content-des-label-item">{{item.mode==='article'?"文章":"话题"}}</view>
 					</view>
 					<view class="list-card-content-des-browse">{{item.browse_count}}浏览</view>
 				</view>
 			</view>
 		</view>
-		
-		<!-- topic模式 -->
-		<view class="list-card mode-cloumn" v-if="item.mode === 'topic'">
+		<!-- <view class="list-card" :class="(item.cover.length === 1)?'mode-image':'mode-cloumn'" v-if="item.mode === 'topic'">
+			<view class="list-card-image" v-if="item.cover.length === 1">
+				<image :src="item.cover[0]" mode="aspectFill"></image>
+			</view>
 			<view class="list-card-content">
 				<view class="list-card-content-title">
 					<text>{{item.title}}</text>
 				</view>
-				<view class="list-card-image" v-if="item.cover.length !== 0">
+				<view class="list-card-image" v-if="item.cover.length > 1">
 					<view v-if="index < 3" v-for="(image, index) in item.cover" :key="index" class="list-card-image-item">
 						<image :src="image" mode="aspectFill"></image>
 					</view>
@@ -41,7 +44,7 @@
 					<view class="list-card-content-des-browse">{{item.browse_count}}浏览</view>
 				</view>
 			</view>
-		</view>
+		</view> -->
 	</view>
 </template>
 
@@ -71,6 +74,7 @@
 		methods: {
 			openDetail() {
 				const item = this.item
+				this.$store.dispatch('set_topic_detail_cache', item)
 				switch (item.mode) {
 					case 'article':
 						uni.navigateTo({
@@ -154,7 +158,7 @@
 			}
 		}
 		&.mode-cloumn {
-			.list-card-content {
+			d {
 				width: 100%;
 				padding-left: 0;
 			}
@@ -179,6 +183,22 @@
 			}
 			.list-card-content-des {
 				margin-top: 20rpx;
+			}
+		}
+		&.mode-image {
+			flex-direction: column;
+			.list-card-image {
+				width: 100%;
+				height: 300rpx;
+			}
+			.list-card-content {
+				padding-left: 0;
+				margin-top: 20rpx;
+				.list-card-content-des {
+					display: flex;
+					align-items: center;
+					margin-top: 20rpx;
+				}
 			}
 		}
 	}

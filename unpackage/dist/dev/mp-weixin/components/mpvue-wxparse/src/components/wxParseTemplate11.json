@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "weixin-parse-img": "/components/mpvue-wxparse/src/components/wxParseImg",
+    "weixin-parse-video": "/components/mpvue-wxparse/src/components/wxParseVideo",
+    "weixin-parse-audio": "/components/mpvue-wxparse/src/components/wxParseAudio"
+  }
+}

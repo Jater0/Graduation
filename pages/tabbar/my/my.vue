@@ -32,18 +32,18 @@
 				</view>
 			</view>
 		</view>
-		<view class="my-content">
+		<view class="my-content" v-if="isLogin">
+			<view class="my-content-list" @click="openMyTopic">
+				<view class="my-content-list-title">
+					<uni-icons class="icons" type="contact" size="16" color="#666"></uni-icons>
+					<text>我的话题</text>
+				</view>
+				<uni-icons type="arrowright" size="14" color="#666"></uni-icons>
+			</view>
 			<view class="my-content-list" @click="openMyArticle">
 				<view class="my-content-list-title">
 					<uni-icons class="icons" type="contact" size="16" color="#666"></uni-icons>
 					<text>我的文章</text>
-				</view>
-				<uni-icons type="arrowright" size="14" color="#666"></uni-icons>
-			</view>
-			<view class="my-content-list" @click="openArticleThumbsup">
-				<view class="my-content-list-title">
-					<uni-icons class="icons" type="hand-thumbsup-filled" size="16" color="#666"></uni-icons>
-					<text>点赞文章</text>
 				</view>
 				<uni-icons type="arrowright" size="14" color="#666"></uni-icons>
 			</view>
@@ -79,8 +79,6 @@
 			return {
 				appId: 'wx8f244f3c21c96dd9',
 				secret: '6db0a6c24b162f142ed96e355a4c1767',
-				// systemUserInfo: uni.getStorageSync('systemUserInfo') || {},
-				// isLogin: uni.getStorageSync('isLogin') || false
 			};
 		},
 		onLoad() {
@@ -206,6 +204,21 @@
 			openFeedback() {
 				uni.navigateTo({
 					url:'/pages/feedback/feedback'
+				})
+			},
+			openArticleFavorites() {
+				uni.navigateTo({
+					url: '/pages/article-list/article-list?params=favorites'
+				})
+			},
+			openMyArticle() {
+				uni.navigateTo({
+					url:'/pages/article-list/article-list?params=myarticle'
+				})
+			},
+			openMyTopic() {
+				uni.navigateTo({
+					url: '/pages/article-list/article-list?params=mytopic'
 				})
 			}
 		}

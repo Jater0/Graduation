@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "list-scroll": "/components/list-scroll/list-scroll",
+    "likes": "/components/likes/likes",
+    "list-card": "/components/list-card/list-card"
+  }
+}

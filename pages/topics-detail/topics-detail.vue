@@ -25,14 +25,19 @@
 				</view>
 			</view>
 		</view>
-		<view class="article-area">
-			<swiper :style="{height: articleAreaHeight + 'px'}">
+		<view class="article-area" v-if="!noDataShow">
+			<swiper :style="{height: articleAreaHeight +'px'}" @change="loadmore">
 				<swiper-item v-for="(item, index) in articles" :key="index">
-					<scroll-view scroll-y :style="{height: articleAreaHeight + 'px'}">
+					<scroll-view scroll-y style="height: 100%;">
 						<article-detail :article="item"></article-detail>
 					</scroll-view>
 				</swiper-item>
 			</swiper>
+		</view>
+		<view class="article-area" v-else>
+			<view class="no-data">
+				暂时还没有文章, 请回复此话题吧
+			</view>
 		</view>
 	</view>
 </template>
@@ -48,9 +53,13 @@
 		data() {
 			return {
 				articles: [],
+				load: {},
 				tabIndex: 0,
-				articleAreaHeight: 200,
-				topicDetail: {}
+				articleAreaHeight: 0,
+				topicDetail: {},
+				pageSize: 5,
+				noDataShow: false,
+				requestTime: 0
 			};
 		},
 		filters: {
@@ -59,7 +68,7 @@
 			}
 		},
 		computed: {
-			...mapState(['userid'])
+			...mapState(['userid', 'topicDetailCache'])
 		},
 		watch: {
 			articles(newVal) {
@@ -67,7 +76,11 @@
 			}
 		},
 		onLoad(data) {
-			this.getTopicDetailById(data.params)
+			this.topicDetail = this.topicDetailCache
+			this.getArticleByTopicId(data.params)
+		},
+		onReady() {
+			this.heightHandler()
 		},
 		methods: {
 			getTopicDetailById(topic_id) {
@@ -82,7 +95,6 @@
 						if (code === 200) {
 							uni.hideLoading()
 							this.topicDetail = data
-							console.log(this.topicDetail);
 							this.heightHandler()
 							this.getArticleByTopicId(topic_id)
 						} else {
@@ -103,17 +115,61 @@
 				})
 			},
 			getArticleByTopicId(topic_id) {
-				uni.request({
-					url: 'http://localhost:8000/forum/get_article',
-					data: {
-						id: this.userid,
-						topic: topic_id,
+				if (!this.load || JSON.stringify(this.load) === '{}') {
+					this.load = {
 						page: 1,
-						size: 3
-					},
+						loading: 'loading'
+					}
+				}
+				uni.request({
+					method: 'GET',
+					url: this.$api.address + `forum/get_article/${this.userid}/${topic_id}/${this.load.page}/${this.pageSize}`,
 					success: (res) => {
-						const {data} = res.data
-						this.articles = data
+						const {data, code} = res.data
+						if (code === 200) {
+							if (data.length === 0) {
+								if (this.requestTime === 0) {
+									this.noDataShow = true
+									return
+								}
+								let oldLoad = {}
+								oldLoad.loading = 'noMore'
+								oldLoad.page = this.load.page
+								this.load = oldLoad
+								this.$forceUpdate()
+								uni.showToast({
+									title: '已经全部加载',
+									icon: 'none'
+								})
+								return
+							}
+							this.requestTime++
+							let oldList = this.articles
+							oldList.push(...data)
+							this.articles = oldList
+							this.$forceUpdate()
+						} else if (code === 500) {
+							let oldLoad = {}
+							oldLoad.loading = 'noMore'
+							oldLoad.page = this.load.page
+							this.load = oldLoad
+							this.$forceUpdate()
+							uni.showToast({
+								title: '数据请求失败, 请稍后再试',
+								icon: 'none'
+							})
+						}
+					},
+					fail: (err) => {
+						let oldLoad = {}
+						oldLoad.loading = 'noMore'
+						oldLoad.page = this.load.page
+						this.load = oldLoad
+						this.$forceUpdate()
+						uni.showToast({
+							title: '数据请求失败, 请稍后再试',
+							icon: 'none'
+						})
 					}
 				})
 			},
@@ -130,8 +186,27 @@
 				const query = uni.createSelectorQuery().in(this)
 				query.select('.topic-area').boundingClientRect(data => {
 					const info = uni.getSystemInfoSync()
-					this.articleAreaHeight = info.windowHeight - data.height
+					this.articleAreaHeight = this.articleAreaHeight + info.windowHeight - data.height
 				}).exec()
+			},
+			writeArticleForTopic() {
+				var paramsObj = {
+					id: this.topicDetail._id,
+					type: this.topicDetail.classify,
+					title: this.topicDetail.title
+				}
+				this.$store.dispatch('set_answerTopic_cache', paramsObj)
+				uni.navigateTo({
+					url: '/pages/article-imple/article-imple?params=answer'
+				})
+			},
+			loadmore(data) {
+				console.log("no-more");
+				if (this.load.loading === 'noMore') return
+				if (data.detail.current === this.articles.length) {
+					this.load.page++
+					this.getArticleByTopicId(this.topicDetail._id)
+				}
 			}
 		}
 	}
@@ -216,6 +291,13 @@
 			box-sizing: border-box;
 			swiper-item {
 				overflow: scroll;
+			}
+			.no-data {
+				text-align: center;
+				width: 100%;
+				padding: 100rpx 0;
+				color: #999;
+				font-size: 28rpx;
 			}
 		}
 	}

@@ -49,6 +49,11 @@
 					this.getList(this.activeIndex)
 				}
 			})
+			uni.$on('update_author_follow', (e) => {
+				this.listCatchData[0] = []
+				this.load[0] = {}
+				this.getList(0)
+			})
 		},
 		watch: {
 			tab(newVal) {
@@ -73,53 +78,31 @@
 				}
 			},
 			getList(current) {
-				if (!this.load[current]) {
+				if (!this.load[current] || JSON.stringify(this.load[current]) === "{}") {
 					this.load[current] = {
 						page: 1,
 						loading: 'loading'
 					}
 				}
 				var url = ''
-				var data = {}
 				if (this.userid === null) {
 					if (current > 1) {
 						console.log("stateless Type");
-						url = 'http://localhost:8000/forum/stateless/get_list'
-						data = {
-							name: this.tab[current].label_name,
-							page: this.load[current].page,
-							size: this.pageSize
-						}
+						url = this.$api.address + `forum/stateless/get_list/${this.tab[current].label_name}/${this.load[current].page}/${this.pageSize}`
 					} else if (current === 1) {
 						console.log("Recommend List");
-					} else if (current === 0) {
-						console.log("Stateless Following");
 					}
 				} else if (this.userid !== null){
 					if (current === 1) {
-						console.log("Recommend List");
 					} else if (current > 1) {
-						console.log("Stateful Type");
-						url = 'http://localhost:8000/forum/get_list'
-						data = {
-							id: this.userid,
-							name: this.tab[current].label_name,
-							page: this.load[current].page,
-							size: this.pageSize
-						}
+						url = this.$api.address + `forum/get_list/${this.userid}/${this.tab[current].label_name}/${this.load[current].page}/${this.pageSize}`
 					} else if (current === 0) {
-						console.log("Stateful Following");
-						url = 'http://localhost:8000/forum/get_following'
-						data = {
-							id: this.userid,
-							page: this.load[current].page,
-							size: this.pageSize
-						}
+						url = this.$api.address + `forum/get_following/${this.userid}/${this.load[current].page}/${this.pageSize}`
 					}
 				}
 				uni.request({
+					method: 'GET',
 					url: url,
-					data: data,
 					success: (res) => {
 						const {data} = res.data
 						if (data.length === 0) {

@@ -1,0 +1,10 @@
+(global["webpackJsonp"]=global["webpackJsonp"]||[]).push([["components/mpvue-wxparse/src/components/wxParseTemplate4"],{1002:function(e,n,t){"use strict";var o;t.d(n,"b",(function(){return r})),t.d(n,"c",(function(){return c})),t.d(n,"a",(function(){return o}));var r=function(){var e=this,n=e.$createElement;e._self._c},c=[]},"87b3":function(e,n,t){"use strict";t.r(n);var o=t("1002"),r=t("fbb6");for(var c in r)"default"!==c&&function(e){t.d(n,e,(function(){return r[e]}))}(c);var a,u=t("f0c5"),s=Object(u["a"])(r["default"],o["b"],o["c"],!1,null,null,null,!1,o["a"],a);n["default"]=s.exports},ebc9:function(e,n,t){"use strict";Object.defineProperty(n,"__esModule",{value:!0}),n.default=void 0;var o=function(){t.e("components/mpvue-wxparse/src/components/wxParseTemplate5").then(function(){return resolve(t("99d6"))}.bind(null,t)).catch(t.oe)},r=function(){t.e("components/mpvue-wxparse/src/components/wxParseImg").then(function(){return resolve(t("613c"))}.bind(null,t)).catch(t.oe)},c=function(){t.e("components/mpvue-wxparse/src/components/wxParseVideo").then(function(){return resolve(t("e0ab"))}.bind(null,t)).catch(t.oe)},a=function(){t.e("components/mpvue-wxparse/src/components/wxParseAudio").then(function(){return resolve(t("2ad5"))}.bind(null,t)).catch(t.oe)},u={name:"wxParseTemplate4",props:{node:{}},components:{wxParseTemplate:o,wxParseImg:r,wxParseVideo:c,wxParseAudio:a},methods:{wxParseATap:function(e){var n=e.target.dataset.href;n&&this.node.$host.navigate(n,e)}}};n.default=u},fbb6:function(e,n,t){"use strict";t.r(n);var o=t("ebc9"),r=t.n(o);for(var c in o)"default"!==c&&function(e){t.d(n,e,(function(){return o[e]}))}(c);n["default"]=r.a}}]);
+;(global["webpackJsonp"] = global["webpackJsonp"] || []).push([
+    'components/mpvue-wxparse/src/components/wxParseTemplate4-create-component',
+    {
+        'components/mpvue-wxparse/src/components/wxParseTemplate4-create-component':(function(module, exports, __webpack_require__){
+            __webpack_require__('543d')['createComponent'](__webpack_require__("87b3"))
+        })
+    },
+    [['components/mpvue-wxparse/src/components/wxParseTemplate4-create-component']]
+]);

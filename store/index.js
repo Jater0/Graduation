@@ -10,7 +10,9 @@ const store = new Vuex.Store({
 		isLogin: uni.getStorageSync('isLogin') || false,
 		userid: uni.getStorageSync('userid') || null,
 		labelAll: uni.getStorageSync('labelAll') || [],
-		labelList: uni.getStorageSync('labelList') || []
+		labelList: uni.getStorageSync('labelList') || [],
+		answerTopicCache: {},
+		topicDetailCache: {}
 	},
 	mutations: {
 		SET_HISTORY(state, history) {
@@ -33,6 +35,18 @@ const store = new Vuex.Store({
 		},
 		SET_LABEL_LIST(state, labelList) {
 			state.labelList = labelList
+		},
+		SET_ANSWER_TOPIC_CACHE(state, answerTopic) {
+			state.answerTopicCache = answerTopic
+		},
+		CLEAR_ANSWER_TOPIC_CACHE(state) {
+			state.answerTopicCache = {}
+		},
+		SET_TOPIC_DETAIL_CACHE(state, topicDetailCache) {
+			state.topicDetailCache = topicDetailCache
+		},
+		CLEAR_TOPIC_DETAIL_CACHE(state) {
+			state.topicDetailCache = {}
 		}
 	},
 	actions: {
@@ -70,6 +84,18 @@ const store = new Vuex.Store({
 		set_label_list({commit}, labelList) {
 			uni.setStorageSync('labelList', labelList)
 			commit('SET_LABEL_LIST', labelList)
+		},
+		set_answerTopic_cache({commit}, answerTopic) {
+			commit('SET_ANSWER_TOPIC_CACHE', answerTopic)
+		},
+		clear_answerTopic_cache({commit}) {
+			commit('CLEAR_ANSWER_TOPIC_CACHE')
+		},
+		set_topic_detail_cache({commit}, topicDetailCache) {
+			commit('SET_TOPIC_DETAIL_CACHE', topicDetailCache)
+		},
+		clear_topic_detail_cache({commit}) {
+			commit('CLEAR_TOPIC_DETAIL_CACHE')
 		}
 	}
 })

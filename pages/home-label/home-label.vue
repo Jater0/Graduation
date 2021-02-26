@@ -13,10 +13,10 @@
 				<view class="label-content-item" v-for="(item, index) in myTab" :key="item.id">
 					{{item.label_name}}
 					<uni-icons v-if="editTextShow" class="icons-close" type="clear" size="20" color="red" @click="delTabFromMine(index)"></uni-icons>
-					</view>
-					<view class="no-data" v-if="myTab.length === 0 && !loading">
-						当前没有数据
-					</view>
+				</view>
+				<view class="no-data" v-if="myTab.length === 0 && !loading">
+					当前没有数据
+				</view>
 			</view>
 		</view>
 		<view class="label-box">

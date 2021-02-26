@@ -1,0 +1,10 @@
+(global["webpackJsonp"]=global["webpackJsonp"]||[]).push([["components/mpvue-wxparse/src/components/wxParseTemplate1"],{"0306":function(e,n,t){"use strict";var o;t.d(n,"b",(function(){return r})),t.d(n,"c",(function(){return c})),t.d(n,"a",(function(){return o}));var r=function(){var e=this,n=e.$createElement;e._self._c},c=[]},"08c4":function(e,n,t){"use strict";t.r(n);var o=t("0306"),r=t("923c");for(var c in r)"default"!==c&&function(e){t.d(n,e,(function(){return r[e]}))}(c);var a,u=t("f0c5"),s=Object(u["a"])(r["default"],o["b"],o["c"],!1,null,null,null,!1,o["a"],a);n["default"]=s.exports},"923c":function(e,n,t){"use strict";t.r(n);var o=t("d732"),r=t.n(o);for(var c in o)"default"!==c&&function(e){t.d(n,e,(function(){return o[e]}))}(c);n["default"]=r.a},d732:function(e,n,t){"use strict";Object.defineProperty(n,"__esModule",{value:!0}),n.default=void 0;var o=function(){t.e("components/mpvue-wxparse/src/components/wxParseTemplate2").then(function(){return resolve(t("f09e"))}.bind(null,t)).catch(t.oe)},r=function(){t.e("components/mpvue-wxparse/src/components/wxParseImg").then(function(){return resolve(t("613c"))}.bind(null,t)).catch(t.oe)},c=function(){t.e("components/mpvue-wxparse/src/components/wxParseVideo").then(function(){return resolve(t("e0ab"))}.bind(null,t)).catch(t.oe)},a=function(){t.e("components/mpvue-wxparse/src/components/wxParseAudio").then(function(){return resolve(t("2ad5"))}.bind(null,t)).catch(t.oe)},u={name:"wxParseTemplate1",props:{node:{}},components:{wxParseTemplate:o,wxParseImg:r,wxParseVideo:c,wxParseAudio:a},methods:{wxParseATap:function(e){var n=e.target.dataset.href;n&&this.node.$host.navigate(n,e)}}};n.default=u}}]);
+;(global["webpackJsonp"] = global["webpackJsonp"] || []).push([
+    'components/mpvue-wxparse/src/components/wxParseTemplate1-create-component',
+    {
+        'components/mpvue-wxparse/src/components/wxParseTemplate1-create-component':(function(module, exports, __webpack_require__){
+            __webpack_require__('543d')['createComponent'](__webpack_require__("08c4"))
+        })
+    },
+    [['components/mpvue-wxparse/src/components/wxParseTemplate1-create-component']]
+]);

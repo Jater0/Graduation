@@ -33,6 +33,8 @@
 			} else {
 				this.getLabel()
 			}
+			console.log(this.$api.localhost());
+			console.log(this.$api.address);
 		},
 		watch: {
 			userid(newVal) {
