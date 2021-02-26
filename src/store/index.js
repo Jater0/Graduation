@@ -11,7 +11,8 @@ export default new Vuex.Store({
     feedbackCache: {},
     feedbackLoadCache: {},
     roleIdListCache: [],
-    articleContentCache: ""
+    articleContentCache: "",
+    workspaceCache: localStorage.getItem('workspaceCache') || ""
   },
   mutations: {
     SET_ADMIN_INFO(state, adminInfo) {
@@ -37,6 +38,9 @@ export default new Vuex.Store({
     },
     SET_ARTCILE_CONTENT_CACHE(state, content) {
       state.articleContentCache = content
+    },
+    SET_WORKSPACE_CACHE(state, workspaceCache) {
+      state.workspaceCache = workspaceCache
     }
   },
   actions: {
@@ -66,6 +70,10 @@ export default new Vuex.Store({
     },
     set_article_content_cache({commit}, content) {
       commit("SET_ARTCILE_CONTENT_CACHE", content)
+    },
+    set_workspace_cache({commit}, workspaceCache) {
+      localStorage.setItem('workspaceCache', workspaceCache)
+      commit("SET_WORKSPACE_CACHE", workspaceCache)
     }
   }
 })

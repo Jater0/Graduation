@@ -33,22 +33,13 @@ async function createWindow() {
     win.loadURL('app://./index.html')
   }
 
-  ipcMain.on('choose-avatar', (event) => {
+  ipcMain.on('choose-workspace', (event) => {
     dialog.showOpenDialog(win, {
-      filters: [
-        {name: 'Image', extensions: ['*']}
-      ],
-      properties: [
-        'openFile'
-      ]
+      properties: ['openDirectory']
     }).then((result) => {
-      const fs = require('fs')
-      fs.readFile(result.filePaths[0], (err, data) => {
-        if (err) throw err
-        console.log(data);
-      })
+      win.webContents.send('workspace-path', result.filePaths[0])
     }).catch((err) => {
-      console.log(err);
+      
     });
   })
 }

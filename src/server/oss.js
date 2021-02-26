@@ -9,7 +9,7 @@ const OSSConfig = {
         success_action_status: '200',
         accessKeyId: '',
         accessKeySecret: '',
-        bucket: 'objective-forum-oss',
+        bucket: '',
     }
 }
 
