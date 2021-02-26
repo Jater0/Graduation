@@ -46,4 +46,34 @@ public class FeedbackServiceImpl implements FeedbackService {
         sqlSession.close();
         return first + second;
     }
+
+    @Override
+    public List<Feedback> findFeedbackByType(int type, int start, int size) {
+        SqlSession sqlSession = MyBatisHandler.getSqlSession();
+        FeedbackMapper mapper = sqlSession.getMapper(FeedbackMapper.class);
+        List<Feedback> feedback = mapper.findFeedbackByType(type, start, size);
+        sqlSession.commit();
+        sqlSession.close();
+        return feedback;
+    }
+
+    @Override
+    public List<Feedback> findFeedbackIsCheck(int start, int size) {
+        SqlSession sqlSession = MyBatisHandler.getSqlSession();
+        FeedbackMapper mapper = sqlSession.getMapper(FeedbackMapper.class);
+        List<Feedback> feedbackList = mapper.findFeedbackIsCheck(start, size);
+        sqlSession.commit();
+        sqlSession.close();
+        return feedbackList;
+    }
+
+    @Override
+    public int updateFeedbackState(String id, int work) {
+        SqlSession sqlSession = MyBatisHandler.getSqlSession();
+        FeedbackMapper mapper = sqlSession.getMapper(FeedbackMapper.class);
+        int updateCode = mapper.updateFeedbackState(id, work);
+        sqlSession.commit();
+        sqlSession.close();
+        return updateCode;
+    }
 }

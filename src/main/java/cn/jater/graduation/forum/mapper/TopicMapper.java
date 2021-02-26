@@ -34,4 +34,15 @@ public interface TopicMapper extends TopicService {
             "</foreach>" +
             "</script>"})
     int insertTopicCovers(@Param("covers") List<String> covers, String topic_id);
+
+
+    @Insert({"insert into topic" +
+            "(_id, author_id, author_name, avatar, `mode`, title, classify, create_time) " +
+            "values" +
+            "(#{id}, #{author_id}, #{author_name}, #{avatar}, \"topic\", #{content}, #{type}, NOW())"})
+    int insertTopicWithAdminAndCovers(String id, String author_id, String author_name, String avatar, String content, String type);
+
+    @Override
+    @Select({"select * from topic where author_id = #{id} order by create_time desc limit #{start}, #{size}"})
+    List<Topic> findTopicOwn(String id, int start, int size);
 }

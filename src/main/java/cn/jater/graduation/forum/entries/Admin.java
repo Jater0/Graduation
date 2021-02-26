@@ -1,5 +1,7 @@
 package cn.jater.graduation.forum.entries;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.io.Serializable;
 import java.sql.Timestamp;
 
@@ -11,17 +13,20 @@ public class Admin implements Serializable {
     private String admin_name;
     private String admin_phone;
     private String admin_email;
+    @JsonIgnore
     private String password;
     private String gender;
     private String avatar;
     private String explain;
     private int professional;
+    private String action;
+    private boolean is_delete;
 
     public Admin() {
 
     }
 
-    public Admin(int id, String _id, Timestamp create_time, String admin_name, String admin_phone, String admin_email, String password, String gender, String avatar, String explain, int professional) {
+    public Admin(int id, String _id, Timestamp create_time, String admin_name, String admin_phone, String admin_email, String password, String gender, String avatar, String explain, int professional, String action, boolean is_delete) {
         this.id = id;
         this._id = _id;
         this.create_time = create_time;
@@ -33,6 +38,8 @@ public class Admin implements Serializable {
         this.avatar = avatar;
         this.explain = explain;
         this.professional = professional;
+        this.action = action;
+        this.is_delete = is_delete;
     }
 
     public int getId() {
@@ -121,5 +128,21 @@ public class Admin implements Serializable {
 
     public void setProfessional(int professional) {
         this.professional = professional;
+    }
+
+    public String getAction() {
+        return action;
+    }
+
+    public void setAction(String action) {
+        this.action = action;
+    }
+
+    public boolean isIs_delete() {
+        return is_delete;
+    }
+
+    public void setIs_delete(boolean is_delete) {
+        this.is_delete = is_delete;
     }
 }

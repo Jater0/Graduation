@@ -41,4 +41,14 @@ public class UserTopicServiceImpl implements UserTopicService {
         sqlSession.close();
         return output;
     }
+
+    @Override
+    public List<UserTopic> findTopicWithRecommendStateless(int start, int pageSize) {
+        SqlSession sqlSession = MyBatisHandler.getSqlSession();
+        UserTopicMapper mapper = sqlSession.getMapper(UserTopicMapper.class);
+        List<UserTopic> output = mapper.findTopicWithRecommendStateless(start, pageSize);
+        sqlSession.commit();
+        sqlSession.close();
+        return output;
+    }
 }

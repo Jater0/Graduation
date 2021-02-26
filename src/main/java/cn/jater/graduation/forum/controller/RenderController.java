@@ -5,9 +5,7 @@ import cn.jater.graduation.forum.service.impl.*;
 import cn.jater.graduation.forum.utils.message.MessageHandler;
 import com.alibaba.fastjson.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -51,11 +49,21 @@ public class RenderController {
         }
     }
 
-    @RequestMapping("/get_list")
-    public MessageHandler getListStateless(@RequestParam String name, int page, int size) {
+    @GetMapping("/get_list/{name}/{page}/{size}")
+    public MessageHandler getListStateless(@PathVariable("name") String name,
+                                           @PathVariable("page") int page, @PathVariable("size") int size) {
         try {
             List<UserTopic> output = userTopicService.findTopicStateless(name, (page - 1) * size, size);
             return new MessageHandler<>(200, output);
+        } catch (Exception e) {
+            return new MessageHandler<>(500, "get list failed");
+        }
+    }
+
+    @GetMapping("/get_recommend/{page}/{size}")
+    public MessageHandler getRecommendStateless(@PathVariable("page") int page, @PathVariable("size") int size) {
+        try {
+            return new MessageHandler<>(200, "get list failed");
         } catch (Exception e) {
             return new MessageHandler<>(500, "get list failed");
         }

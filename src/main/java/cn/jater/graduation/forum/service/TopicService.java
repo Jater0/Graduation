@@ -7,7 +7,9 @@ import java.util.List;
 
 public interface TopicService {
     Topic findTopicByTopicId(String topic_id);
+    List<Topic> findTopicOwn(String id, int start, int size);
     List<String> findCoverByTopicId(String topic_id);
     int insertTopicWithSqlFuncWithoutCovers(String topic_id, String user_id, String title, String classify, Timestamp create_time);
     int insertTopicWithSqlFuncWithCovers(String topic_id, String user_id, String title, String classify, Timestamp create_time, List<String> covers);
+    int insertTopicWithAdmin(String id, String author_id, String author_name, String avatar, String content, String type, List<String> covers);
 }

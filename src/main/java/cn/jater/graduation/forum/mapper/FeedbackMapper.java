@@ -33,4 +33,28 @@ public interface FeedbackMapper extends FeedbackService {
             "</foreach>" +
             "</script>"})
     int insertFeedbackCovers(@Param("covers") List<String> covers,@Param("feedback_id") String feedback_id);
+
+    @Override
+    @Select({"select * from feedback where feedback_type = #{type} and is_check = 0 limit #{start}, #{size}"})
+    @Results({
+            @Result(property = "_id", column = "_id"),
+            @Result(property = "feedback_cover", column = "_id",
+                    many = @Many(select = "cn.jater.graduation.forum.mapper.FeedbackMapper.findFeedbackCoverByFeedbackId",
+                            fetchType = FetchType.EAGER))
+    })
+    List<Feedback> findFeedbackByType(int type, int start, int size);
+
+    @Override
+    @Select({"select * from feedback where is_check = 1 limit #{start}, #{size}"})
+    @Results({
+            @Result(property = "_id", column = "_id"),
+            @Result(property = "feedback_cover", column = "_id",
+                    many = @Many(select = "cn.jater.graduation.forum.mapper.FeedbackMapper.findFeedbackCoverByFeedbackId",
+                            fetchType = FetchType.EAGER))
+    })
+    List<Feedback> findFeedbackIsCheck(int start, int size);
+
+    @Override
+    @Select({"select update_feedback(#{id}, #{work})"})
+    int updateFeedbackState(String id, int work);
 }

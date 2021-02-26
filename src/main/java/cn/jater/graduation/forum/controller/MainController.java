@@ -9,9 +9,7 @@ import cn.jater.graduation.forum.utils.oss.PhotoHandler;
 import cn.jater.graduation.forum.utils.time.TimeFormatHandler;
 import com.alibaba.fastjson.JSON;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.sql.Timestamp;
 import java.util.List;
@@ -114,8 +112,9 @@ public class MainController {
         }
     }
 
-    @RequestMapping("/get_list")
-    public MessageHandler getListWithUserId(@RequestParam String id, String name, int page, int size) {
+    @GetMapping("/get_list/{id}/{name}/{page}/{size}")
+    public MessageHandler getListWithUserId(@PathVariable("id") String id, @PathVariable("name") String name,
+                                            @PathVariable("page") int page, @PathVariable("size") int size) {
         try {
             List<UserTopic> output = userTopicService.findTopicWithLikesByUserId(id, name, (page - 1) * size, size);
             return new MessageHandler<>(200, output);
@@ -124,8 +123,10 @@ public class MainController {
         }
     }
 
-    @RequestMapping("/get_following")
-    public MessageHandler getFollowingWithUserId(@RequestParam String id, int page, int size) {
+    @GetMapping("/get_following/{id}/{page}/{size}")
+    public MessageHandler getFollowingWithUserId(@PathVariable("id") String id,
+                                                 @PathVariable("page")int page,
+                                                 @PathVariable("size") int size) {
         try {
             List<UserTopic> output = userTopicService.findTopicWithFollowingByUserId(id, (page-1) * size, size);
             return new MessageHandler<>(200, output);
@@ -134,8 +135,9 @@ public class MainController {
         }
     }
 
-    @RequestMapping("/get_article")
-    public MessageHandler getArticle(@RequestParam String id, String topic, int page, int size) {
+    @GetMapping("/get_article/{id}/{topic}/{page}/{size}")
+    public MessageHandler getArticle(@PathVariable("id") String id, @PathVariable("topic") String topic,
+                                     @PathVariable("page")int page, @PathVariable("size") int size) {
         try {
             List<Article> output = articleService.findArticleDetailByUserIdAndTopicId(id, topic, (page - 1) * size, size);
             return new MessageHandler<>(200, output);
@@ -179,7 +181,7 @@ public class MainController {
     }
 
     @RequestMapping("/update_comment")
-    public MessageHandler updateComment(@RequestParam String cid, String content,int reply, String father, String aid, String name, String avatar, String to, String to_uid) {
+    public MessageHandler updateComment(String cid, String content,int reply, String father, String aid, String name, String avatar, String to, String to_uid) {
         try {
             commentService.insertNewComment(cid, content, TimeFormatHandler.getNow(), reply, father, aid, name, avatar, to, to_uid);
             return new MessageHandler<>(200, "update comment success");
@@ -221,6 +223,85 @@ public class MainController {
             return new MessageHandler<>(200, insertSuccess);
         } catch (Exception e) {
             return new MessageHandler<>(500, "update feedback failed");
+        }
+    }
+
+    @RequestMapping(value = "/create_article", method = RequestMethod.POST)
+    public MessageHandler createArticleUser(String id, String title, String classify, String content, String covers) {
+        try {
+            List<String> convertCovers = JSON.parseArray(covers, String.class);
+            int insertCode = articleService.insertArticleByUser(
+                    IDHandler.getRandomID("art", 8),
+                    id,
+                    title,
+                    classify,
+                    content,
+                    convertCovers);
+            if (insertCode == 0) return new MessageHandler<>(500, "create article failed");
+            else return new MessageHandler<>(200, "create article success");
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new MessageHandler<>(500, "create article failed");
+        }
+    }
+
+    @RequestMapping("/answer_topic")
+    public MessageHandler answerTopicUser(String topic, String id, String type, String classify, String content) {
+        try {
+            int insertCode = articleService.answerTopicUser(
+                    IDHandler.getRandomID("tp", 8),
+                    topic,
+                    id,
+                    type,
+                    classify,
+                    content);
+            if (insertCode == 0) return new MessageHandler<>(500, "answer topic failed");
+            else return new MessageHandler<>(200, "answer topic success");
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new MessageHandler<>(200, "answer topic success");
+        }
+    }
+
+    @GetMapping("/get_recommend/{id}/{page}/{size}")
+    public MessageHandler getRecommend(@PathVariable("id") String id, @PathVariable("page")int page, @PathVariable("size") int size) {
+        try {
+            return new MessageHandler<>(200, "get recommend list success");
+        } catch (Exception e) {
+            return new MessageHandler<>(500, "get recommend list failed");
+        }
+    }
+
+    @GetMapping("/get_article_like/{id}/{page}/{size}")
+    public MessageHandler getArticleLike(@PathVariable("id") String id, @PathVariable("page") int page, @PathVariable("size") int size) {
+        try {
+            List<Article> articles = articleService.findArticleByUserLike(id, (page - 1) * size, size);
+            return new MessageHandler<>(200, articles);
+        } catch (Exception e) {
+            return new MessageHandler<>(500, "get article by user likes failed");
+        }
+    }
+
+    @GetMapping("/get_article_own/{id}/{page}/{size}")
+    public MessageHandler getArticleOwn(@PathVariable("id") String id,
+                                        @PathVariable("page") int page,
+                                        @PathVariable("size") int size) {
+        try {
+            List<Article> articles = articleService.findArticleByOwn(id, (page - 1) * size, size);
+            return new MessageHandler<>(200, articles);
+        } catch (Exception e) {
+            return new MessageHandler<>(500, "get article own failed");
+        }
+    }
+
+    @GetMapping("/get_topic_own/{id}/{page}/{size}")
+    public MessageHandler getTopicOwn(@PathVariable("id") String id,
+                                      @PathVariable("page") int page,
+                                      @PathVariable("size") int size) {
+        try {
+            return new MessageHandler<>(200, "get topic own success");
+        } catch (Exception e) {
+            return new MessageHandler<>(500, "get topic own failed");
         }
     }
 }

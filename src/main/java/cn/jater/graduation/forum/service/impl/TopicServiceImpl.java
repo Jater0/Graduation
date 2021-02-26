@@ -8,9 +8,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Service;
 
 import java.sql.Timestamp;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 @Service
 public class TopicServiceImpl implements TopicService {
@@ -23,6 +21,16 @@ public class TopicServiceImpl implements TopicService {
         sqlSession.commit();
         sqlSession.close();
         return topic;
+    }
+
+    @Override
+    public List<Topic> findTopicOwn(String id, int start, int size) {
+        SqlSession sqlSession = MyBatisHandler.getSqlSession();
+        TopicMapper mapper = sqlSession.getMapper(TopicMapper.class);
+        List<Topic> topicList = mapper.findTopicOwn(id, start, size);
+        sqlSession.commit();
+        sqlSession.close();
+        return topicList;
     }
 
     @Override
@@ -59,4 +67,17 @@ public class TopicServiceImpl implements TopicService {
         return insertFirst + insertSecond;
     }
 
+    @Override
+    public int insertTopicWithAdmin(String id, String author_id, String author_name, String avatar, String content, String type, List<String> covers) {
+        SqlSession sqlSession = MyBatisHandler.getSqlSession();
+        TopicMapper mapper = sqlSession.getMapper(TopicMapper.class);
+        int insertTopic = mapper.insertTopicWithAdminAndCovers(id, author_id, author_name, avatar, content, type);
+        int insertTopicCover = 0;
+        if (!covers.isEmpty() && insertTopic == 1) {
+            insertTopicCover = mapper.insertTopicCovers(covers, id);
+        }
+        sqlSession.commit();
+        sqlSession.close();
+        return insertTopic + insertTopicCover;
+    }
 }

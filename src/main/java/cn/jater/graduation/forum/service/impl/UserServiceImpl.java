@@ -7,7 +7,9 @@ import cn.jater.graduation.forum.utils.mybatis.MyBatisHandler;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -38,5 +40,19 @@ public class UserServiceImpl implements UserService {
         sqlSession.commit();
         sqlSession.close();
         return users;
+    }
+
+    @Override
+    public Map<String, Object> findAllUserWithCount(int start, int pageSize) {
+        SqlSession sqlSession = MyBatisHandler.getSqlSession();
+        UserMapper mapper = sqlSession.getMapper(UserMapper.class);
+        int count = mapper.countAllUser();
+        List<User> users = mapper.findAllUser(start, pageSize);
+        sqlSession.commit();
+        sqlSession.close();
+        Map<String, Object> output = new HashMap<>();
+        output.put("users", users);
+        output.put("count", count);
+        return output;
     }
 }

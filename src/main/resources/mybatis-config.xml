@@ -41,5 +41,6 @@
         <mapper class="cn.jater.graduation.forum.mapper.FeedbackMapper"/>
 
         <mapper class="cn.jater.graduation.forum.mapper.AdminMapper"/>
+        <mapper class="cn.jater.graduation.forum.mapper.AdminRoleMapper"/>
     </mappers>
 </configuration>

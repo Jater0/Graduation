@@ -68,4 +68,6 @@ public interface UserMapper extends UserService {
     })
     List<User> findAllUser(int start, int pageSize);
 
+    @Select({"select count(*) from user"})
+    int countAllUser();
 }
