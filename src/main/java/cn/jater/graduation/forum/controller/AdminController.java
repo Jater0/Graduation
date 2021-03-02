@@ -124,7 +124,7 @@ public class AdminController {
         }
     }
 
-    @RequestMapping("/update_avatar")
+    @PostMapping("/update_avatar")
     public MessageHandler updateAdminAvatar(String id, String avatar) {
         try {
             adminService.updateAvatarById(id, avatar);
@@ -144,7 +144,7 @@ public class AdminController {
         }
     }
 
-    @RequestMapping("/get_feedback")
+    @GetMapping("/get_feedback")
     public MessageHandler getFeedbackIsCheck(int page, int size) {
         try {
             List<Feedback> feedbackList = feedbackService.findFeedbackIsCheck((page - 1) * size, size);
@@ -154,7 +154,7 @@ public class AdminController {
         }
     }
 
-    @RequestMapping("/get_feedback/by")
+    @GetMapping("/get_feedback/by")
     public MessageHandler getFeedbackByType(int type, int page, int size) {
         try {
             List<Feedback> feedbackList = feedbackService.findFeedbackByType(type,(page - 1) * size, size);

@@ -11,5 +11,5 @@ public class OSSConstant {
     public static String coverFile = "forum-cover/";
     public static String contentFile = "forum-content/";
     public static String buckName = "";
-    public static String selfOSS = ".oss-cn-shenzhen.aliyuncs.com/";
+    public static String selfOSS = "oss-cn-shenzhen.aliyuncs.com/";
 }

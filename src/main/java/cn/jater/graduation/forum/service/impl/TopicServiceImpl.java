@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import java.sql.Timestamp;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class TopicServiceImpl implements TopicService {
@@ -79,5 +80,25 @@ public class TopicServiceImpl implements TopicService {
         sqlSession.commit();
         sqlSession.close();
         return insertTopic + insertTopicCover;
+    }
+
+    @Override
+    public int deleteTopic(String id) {
+        SqlSession sqlSession = MyBatisHandler.getSqlSession();
+        TopicMapper mapper = sqlSession.getMapper(TopicMapper.class);
+        int deleteCode = mapper.deleteTopic(id);
+        sqlSession.commit();
+        sqlSession.close();
+        return deleteCode;
+    }
+
+    @Override
+    public List<Map<String, String>> findHotListLimitIIX() {
+        SqlSession sqlSession = MyBatisHandler.getSqlSession();
+        TopicMapper mapper = sqlSession.getMapper(TopicMapper.class);
+        List<Map<String, String>> output = mapper.findHotListLimitIIX();
+        sqlSession.commit();
+        sqlSession.close();
+        return output;
     }
 }

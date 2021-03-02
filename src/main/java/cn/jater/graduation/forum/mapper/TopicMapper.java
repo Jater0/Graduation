@@ -7,11 +7,12 @@ import org.apache.ibatis.mapping.FetchType;
 
 import java.sql.Timestamp;
 import java.util.List;
+import java.util.Map;
 
 @Mapper
 public interface TopicMapper extends TopicService {
     @Override
-    @Select({"select * from topic where _id = #{topic_id}"})
+    @Select({"select * from topic where _id = #{topic_id} and is_delete = 0"})
     @Results({
             @Result(property = "_id", column = "_id"),
             @Result(property = "cover", column = "_id",
@@ -43,6 +44,14 @@ public interface TopicMapper extends TopicService {
     int insertTopicWithAdminAndCovers(String id, String author_id, String author_name, String avatar, String content, String type);
 
     @Override
-    @Select({"select * from topic where author_id = #{id} order by create_time desc limit #{start}, #{size}"})
+    @Select({"select * from topic where author_id = #{id} and `mode` = 'topic' and is_delete = 0 order by create_time desc limit #{start}, #{size}"})
     List<Topic> findTopicOwn(String id, int start, int size);
+
+    @Override
+    @Select({"select delete_topic(#{id})"})
+    int deleteTopic(String id);
+
+    @Override
+    @Select({"select _id, `mode`, title from topic ORDER BY browse_count desc limit 8"})
+    List<Map<String, String>> findHotListLimitIIX();
 }

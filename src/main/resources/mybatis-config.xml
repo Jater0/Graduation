@@ -30,6 +30,7 @@
         <mapper class="cn.jater.graduation.forum.mapper.UserArticleLikesMapper"/>
         <mapper class="cn.jater.graduation.forum.mapper.UserArticlePersonalMapper"/>
         <mapper class="cn.jater.graduation.forum.mapper.UserTopicMapper"/>
+        <mapper class="cn.jater.graduation.forum.mapper.UserFollowMapper"/>
 
         <mapper class="cn.jater.graduation.forum.mapper.TopicMapper"/>
         <mapper class="cn.jater.graduation.forum.mapper.TopicArticleMapper"/>

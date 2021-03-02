@@ -23,13 +23,14 @@ public class UserTopic implements Serializable {
     private int comments_count;
     private int thumbs_up_count;
     private boolean is_like;
+    private boolean is_delete;
     private List<String> cover;
 
     public UserTopic() {
 
     }
 
-    public UserTopic(String _id, String author_id, String author_name, String avatar, String mode, String title, String classify, List<String> cover, Timestamp create_time, int browse_count, int collection_count, int comments_count, int thumbs_up_count, boolean is_like) {
+    public UserTopic(boolean is_delete, String _id, String author_id, String author_name, String avatar, String mode, String title, String classify, List<String> cover, Timestamp create_time, int browse_count, int collection_count, int comments_count, int thumbs_up_count, boolean is_like) {
         this._id = _id;
         this.author_id = author_id;
         this.author_name = author_name;
@@ -44,6 +45,15 @@ public class UserTopic implements Serializable {
         this.comments_count = comments_count;
         this.thumbs_up_count = thumbs_up_count;
         this.is_like = is_like;
+        this.is_delete = is_delete;
+    }
+
+    public boolean isIs_delete() {
+        return is_delete;
+    }
+
+    public void setIs_delete(boolean is_delete) {
+        this.is_delete = is_delete;
     }
 
     public String get_id() {

@@ -23,13 +23,15 @@ public class Article implements Serializable {
     private boolean is_author_like;
     private boolean is_like;
     private boolean is_thumbs_up;
+    private boolean is_delete;
 
     public Article() {
 
     }
 
-    public Article(String _id, String topic_id, String mode, String author_id, String author_name, String avatar, String status, String classify, String title, String content, Timestamp create_time, int browse_count, int collection_count, int comments_count, int thumbs_up_count, boolean is_author_like, boolean is_like, boolean is_thumbs_up) {
+    public Article(boolean is_delete,String _id, String topic_id, String mode, String author_id, String author_name, String avatar, String status, String classify, String title, String content, Timestamp create_time, int browse_count, int collection_count, int comments_count, int thumbs_up_count, boolean is_author_like, boolean is_like, boolean is_thumbs_up) {
         this._id = _id;
+        this.is_delete = is_delete;
         this.topic_id = topic_id;
         this.mode = mode;
         this.author_id = author_id;
@@ -191,5 +193,25 @@ public class Article implements Serializable {
 
     public void setIs_thumbs_up(boolean is_thumbs_up) {
         this.is_thumbs_up = is_thumbs_up;
+    }
+
+    public boolean isIs_author_like() {
+        return is_author_like;
+    }
+
+    public boolean isIs_like() {
+        return is_like;
+    }
+
+    public boolean isIs_thumbs_up() {
+        return is_thumbs_up;
+    }
+
+    public boolean isIs_delete() {
+        return is_delete;
+    }
+
+    public void setIs_delete(boolean is_delete) {
+        this.is_delete = is_delete;
     }
 }

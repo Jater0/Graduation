@@ -70,4 +70,16 @@ public interface UserMapper extends UserService {
 
     @Select({"select count(*) from user"})
     int countAllUser();
+
+    @Override
+    @Update({"update user set gender = #{gender} where _id = #{id}"})
+    int updateGender(String id, String gender);
+
+    @Override
+    @Update({"update user set `explain` = #{explain} where _id = #{id}"})
+    int updateExplain(String id, String explain);
+
+    @Override
+    @Update({"update user set professional = #{professional} where _id = #{id}"})
+    int updateProfessional(String id, String professional);
 }

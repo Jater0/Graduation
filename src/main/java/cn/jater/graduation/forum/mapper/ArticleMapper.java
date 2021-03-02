@@ -2,10 +2,7 @@ package cn.jater.graduation.forum.mapper;
 
 import cn.jater.graduation.forum.entries.Article;
 import cn.jater.graduation.forum.service.ArticleService;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 
 import java.util.List;
 
@@ -21,8 +18,23 @@ public interface ArticleMapper extends ArticleService {
             "left join user_author_likes aa on aa.author_id = a.author_id and aa.user_id = #{user_id} " +
             "left join user_article_likes ab on ab.article_id = a._id and ab.user_id = #{user_id} " +
             "where a.topic_id = #{topic_id} " +
+            "and a.is_delete = 0 " +
             " order by a.create_time limit #{start}, #{pageSize}"})
     List<Article> findArticleDetailByUserIdAndTopicId(String user_id, String topic_id, int start, int pageSize);
+
+    @Override
+    @Select({"select " +
+            "a.*, " +
+            "aa.is_like as is_author_like, " +
+            "ab.is_like as is_like, " +
+            "ab.is_thumbs_up as is_thumbs_up " +
+            "from article a " +
+            "left join user_author_likes aa on aa.author_id = a.author_id and aa.user_id = #{user_id} " +
+            "left join user_article_likes ab on ab.article_id = a._id and ab.user_id = #{user_id} " +
+            "where a._id = #{article_id} " +
+            "and a.is_delete = 0 " +
+            " order by a.create_time limit #{start}, #{pageSize}"})
+    List<Article> findArticleDetailByUserIdAndArticleId(String user_id, String article_id, int start, int pageSize);
 
     @Override
     @Select({"select create_article_admin(#{article_id}, #{uploader_id}, #{uploader_name}, #{uploader_avatar}, #{title}, #{classify}, #{content})"})
@@ -62,11 +74,51 @@ public interface ArticleMapper extends ArticleService {
             "left join user_author_likes aa on aa.author_id = a.author_id and aa.user_id = #{user_id} " +
             "left join user_article_likes ab on ab.article_id = a._id and ab.user_id = #{user_id} " +
             "where ab.is_like = 1 " +
+            "and a.is_delete = 0 " +
             "order by a.create_time desc " +
             "limit #{start}, #{size}"})
     List<Article> findArticleByUserLike(String user_id, int start, int size);
 
     @Override
-    @Select({"select * from article where author_id = #{user_id} order by create_time desc limit #{start}, #{size}"})
+    @Select({"select * from article " +
+            "where author_id = #{user_id} " +
+            "and is_delete = 0 " +
+            "order by create_time desc limit #{start}, #{size}"})
     List<Article> findArticleByOwn(String user_id, int start, int size);
+
+    @Override
+    @Select({"select a.*, " +
+            "aa.is_like as is_author_like, " +
+            "ab.is_like as is_like, " +
+            "ab.is_thumbs_up as is_thumbs_up " +
+            "from article a " +
+            "left join user_author_likes aa on " +
+            "aa.author_id = a.author_id " +
+            "and aa.user_id = #{user_id} " +
+            "left join user_article_likes ab on " +
+            "ab.article_id = a._id " +
+            "and ab.user_id = #{user_id} " +
+            "where a.is_delete = 0 and a.author_id = #{author_id} " +
+            "order by a.create_time desc " +
+            "limit #{start}, #{size}"})
+    List<Article> findArticleWithLikesByAuthorId(String user_id, String author_id, int start, int size);
+
+    @Select({"select count(*) from article where author_id = #{id} and is_delete = 0"})
+    int findArticleCountByUserId(String id);
+
+    @Select({"select * from article where author_id = #{id} and is_delete = 0"})
+    List<Article> findArticlesByUserId(String id);
+
+    @Override
+    @Update({"update article set is_delete = 1 where _id = #{id}"})
+    int deleteArticle(String id);
+
+    @Override
+    @Update({"update " +
+            "article a, topic t " +
+            "set " +
+            "a.browse_count = a.browse_count + 1, " +
+            "t.browse_count = t.browse_count + 1 " +
+            "where a._id = #{article} and a.topic_id = t._id;"})
+    int updateArticleBrowse(String article);
 }

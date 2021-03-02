@@ -24,6 +24,16 @@ public class ArticleServiceImpl implements ArticleService {
     }
 
     @Override
+    public List<Article> findArticleDetailByUserIdAndArticleId(String user_id, String article_id, int start, int pageSize) {
+        SqlSession sqlSession = MyBatisHandler.getSqlSession();
+        ArticleMapper mapper = sqlSession.getMapper(ArticleMapper.class);
+        List<Article> output = mapper.findArticleDetailByUserIdAndArticleId(user_id, article_id, start, pageSize);
+        sqlSession.commit();
+        sqlSession.close();
+        return output;
+    }
+
+    @Override
     public List<Article> findArticleByUserLike(String user_id, int start, int size) {
         SqlSession sqlSession = MyBatisHandler.getSqlSession();
         ArticleMapper mapper = sqlSession.getMapper(ArticleMapper.class);
@@ -38,6 +48,16 @@ public class ArticleServiceImpl implements ArticleService {
         SqlSession sqlSession = MyBatisHandler.getSqlSession();
         ArticleMapper mapper = sqlSession.getMapper(ArticleMapper.class);
         List<Article> output = mapper.findArticleByOwn(user_id, start, size);
+        sqlSession.commit();
+        sqlSession.close();
+        return output;
+    }
+
+    @Override
+    public List<Article> findArticleWithLikesByAuthorId(String user_id, String author_id, int start, int size) {
+        SqlSession sqlSession = MyBatisHandler.getSqlSession();
+        ArticleMapper mapper = sqlSession.getMapper(ArticleMapper.class);
+        List<Article> output = mapper.findArticleWithLikesByAuthorId(user_id, author_id, start, size);
         sqlSession.commit();
         sqlSession.close();
         return output;
@@ -103,5 +123,25 @@ public class ArticleServiceImpl implements ArticleService {
         sqlSession.commit();
         sqlSession.close();
         return insertCode + insertCover;
+    }
+
+    @Override
+    public int deleteArticle(String id) {
+        SqlSession sqlSession = MyBatisHandler.getSqlSession();
+        ArticleMapper mapper = sqlSession.getMapper(ArticleMapper.class);
+        int deleteArticleCode = mapper.deleteArticle(id);
+        sqlSession.commit();
+        sqlSession.close();
+        return deleteArticleCode;
+    }
+
+    @Override
+    public int updateArticleBrowse(String article) {
+        SqlSession sqlSession = MyBatisHandler.getSqlSession();
+        ArticleMapper mapper = sqlSession.getMapper(ArticleMapper.class);
+        int updateCode = mapper.updateArticleBrowse(article);
+        sqlSession.commit();
+        sqlSession.close();
+        return updateCode;
     }
 }

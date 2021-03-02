@@ -24,6 +24,7 @@ public class UserArticle implements Serializable {
     private boolean is_author_like;
     private boolean is_like;
     private boolean is_thumbs_up;
+    private boolean is_delete;
     private List<String> covers;
 
     public UserArticle() {
@@ -36,7 +37,7 @@ public class UserArticle implements Serializable {
                        String content, Timestamp create_time,
                        int browse_count, int collection_count, int comments_count,
                        int thumbs_up_count, boolean is_author_like, boolean is_like,
-                       boolean is_thumbs_up, List<String> covers) {
+                       boolean is_thumbs_up, boolean is_delete, List<String> covers) {
         this._id = _id;
         this.topic_id = topic_id;
         this.mode = mode;
@@ -55,6 +56,7 @@ public class UserArticle implements Serializable {
         this.is_author_like = is_author_like;
         this.is_like = is_like;
         this.is_thumbs_up = is_thumbs_up;
+        this.is_delete = is_delete;
         this.covers = covers;
     }
 
@@ -208,5 +210,13 @@ public class UserArticle implements Serializable {
 
     public void setCovers(List<String> covers) {
         this.covers = covers;
+    }
+
+    public boolean isIs_delete() {
+        return is_delete;
+    }
+
+    public void setIs_delete(boolean is_delete) {
+        this.is_delete = is_delete;
     }
 }

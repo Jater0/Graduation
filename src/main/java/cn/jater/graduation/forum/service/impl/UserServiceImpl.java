@@ -55,4 +55,34 @@ public class UserServiceImpl implements UserService {
         output.put("count", count);
         return output;
     }
+
+    @Override
+    public int updateGender(String id, String gender) {
+        SqlSession sqlSession = MyBatisHandler.getSqlSession();
+        UserMapper mapper = sqlSession.getMapper(UserMapper.class);
+        int updateCode = mapper.updateGender(id, gender);
+        sqlSession.commit();
+        sqlSession.close();
+        return updateCode;
+    }
+
+    @Override
+    public int updateExplain(String id, String explain) {
+        SqlSession sqlSession = MyBatisHandler.getSqlSession();
+        UserMapper mapper = sqlSession.getMapper(UserMapper.class);
+        int updateCode = mapper.updateExplain(id, explain);
+        sqlSession.commit();
+        sqlSession.close();
+        return updateCode;
+    }
+
+    @Override
+    public int updateProfessional(String id, String professional) {
+        SqlSession sqlSession = MyBatisHandler.getSqlSession();
+        UserMapper mapper = sqlSession.getMapper(UserMapper.class);
+        int updateCode = mapper.updateProfessional(id, professional);
+        sqlSession.commit();
+        sqlSession.close();
+        return updateCode;
+    }
 }
