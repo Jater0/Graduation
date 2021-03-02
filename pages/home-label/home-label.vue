@@ -46,8 +46,6 @@
 		data() {
 			return {
 				editTextShow: false,
-				// labelAll: uni.getStorageSync('label_all'),
-				// labelTrue: uni.getStorageSync('label_list'),
 				myTab: [],
 				notMyTab: [],
 				updateTab: [],
@@ -70,40 +68,10 @@
 					this.editTextShow = true
 				}
 			},
-			// setUpdateLabel(label) {
-			// 	let newArr = []
-			// 	label.forEach(item => {
-			// 		newArr.push(item._id)
-			// 	})
-			// 	uni.showLoading()
-			// 	var data = encodeURIComponent(JSON.stringify(newArr))
-			// 	uni.request({
-			// 		url: 'http://localhost:8000/forum/update_label',
-			// 		data: {
-			// 			id: 'opUg543ejq_uW-SNj-dqJbNiIEfs',
-			// 			data: data
-			// 		},
-			// 		success: (res) => {
-			// 			uni.hideLoading()
-			// 			uni.showToast({
-			// 				title: "更新成功"
-			// 			})
-			// 			var newLabelTrue = []
-			// 			newLabelTrue[0] = this.labelTrue[0]
-			// 			newLabelTrue[1] = this.labelTrue[1]
-			// 			for (var i = 0; i < label.length; i++) {
-			// 				newLabelTrue[i+2] = label[i]
-			// 			}
-			// 			uni.setStorageSync('label_list', newLabelTrue)
-			// 			uni.setStorageSync('label_all', this.myTab.concat(this.notMyTab))
-			// 			uni.$emit('newLabel')
-			// 		}
-			// 	})
-			// },
 			updateLabel(updateTab) {
 				uni.showLoading()
 				uni.request({
-					url: 'http://localhost:8000/forum/update_label',
+					url: this.$api.address + 'forum/update_label',
 					data: {
 						id: this.userid,
 						updates: updateTab

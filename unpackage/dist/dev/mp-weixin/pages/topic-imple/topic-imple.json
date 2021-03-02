@@ -1,8 +1,0 @@
-{
-  "navigationBarTitleText": "话题发布",
-  "enablePullDownRefresh": false,
-  "usingComponents": {
-    "uni-icons": "/components/uni-icons/uni-icons",
-    "classify-selector": "/components/classify-selector/classify-selector"
-  }
-}

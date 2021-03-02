@@ -1,1 +1,0 @@
-<article-detail vue-id="040b0c00-1" article="{{article}}" bind:__l="__l"></article-detail>

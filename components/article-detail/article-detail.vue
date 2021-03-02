@@ -6,7 +6,7 @@
 				<image :src="article.avatar" mode="aspectFill"></image>
 			</view>
 			<view class="article-header-content">
-				<view class="article-header-content-title">
+				<view class="article-header-content-title" @click="openAuthorDetail">
 					{{author_name}}
 				</view>
 				<view class="article-header-content-info">
@@ -21,7 +21,7 @@
 		</view>
 		<view class="article-content">
 			<view class="article-content-html">
-				<u-parse :content="content" :noData="noData"></u-parse>
+				<towxml :nodes="nodes"></towxml>
 			</view>
 			<view class="comment">
 				<view class="comment-title">最新评论</view>
@@ -55,11 +55,12 @@
 	import UParse from '@/components/gaoyia-parse/parse.vue'
 	import CommentBox from '@/components/comments-box/comments-box.vue'
 	import ActionBottom from '@/components/action-bottom/action-bottom.vue'
+	import towxml from '../../static/towxml/towxml'
 	import {showLoginModel, getID, convertDate} from '@/utils/index.js'
 	import {mapState} from 'vuex'
 	export default {
 		components: {
-			UParse, CommentBox, ActionBottom
+			UParse, CommentBox, ActionBottom, towxml
 		},
 		computed: {
 			...mapState(['userid', 'systemUserInfo'])
@@ -75,53 +76,42 @@
 				default() {
 					return {}
 				}
+			},
+			indexInTopic: {
+				type: Number,
+				default: 0
+			},
+			mode: {
+				type: String,
+				default: "article"
 			}
 		},
 		watch: {
 			article(newVal) {
-				var data = newVal
-				this.article = data
-				this.title = data.title
-				this.author_name = data.author_name
-				this.browse_count = data.browse_count
-				this.thumbs_up_count = data.thumbs_up_count
-				this.create_time = data.create_time
-				this.is_like = data.is_like
-				this.is_thumbs_up = data.is_thumbs_up
-				this.is_author_like = data.is_author_like
-				this.getContent()
-				this.getComment()
-			},
-			content(newVal) {
-				this.content = newVal
+				this.loadArticle(this.reqTime)
 			},
 			commentList(newVal) {
 				this.commentList = newVal
 			}
 		},
 		mounted() {
-			var data = this.article
-			this.title = data.title
-			this.author_name = data.author_name
-			this.browse_count = data.browse_count
-			this.thumbs_up_count = data.thumbs_up_count
-			this.create_time = data.create_time
-			this.is_like = data.is_like
-			this.is_thumbs_up = data.is_thumbs_up
-			this.is_author_like = data.is_author_like
-			this.getContent()
-			this.getComment()
+			if (this.mode === "topic") {
+				this.loadArticle(this.reqTime)
+			}
+		},
+		onShow() {
+			console.log("show");
 		},
 		destroyed() {
-			clearTimeout(this.updateBrowseCount)
+			if (this.mode === "article") {
+				clearTimeout(this.updateBrowseCount)
+			}
 		},
 		data() {
 			return {
-				noData: '<p style="text-align:center; color=#666">文章加载中...</p>',
 				commentValue: '',
 				commentList: [],
 				updateCommentData: {},
-				content: '',
 				title: 'Loading',
 				author_name: 'Loading',
 				browse_count: 0,
@@ -130,27 +120,44 @@
 				is_author_like: false,
 				is_like: false,
 				is_thumbs_up: false,
-				updateBrowseCount: null
+				updateBrowseCount: null,
+				nodes: {},
+				reqTime: 0
 			};
 		},
 		methods: {
+			openAuthorDetail() {
+				uni.navigateTo({
+					url: '/pages/user-detail/user-detail?params=article&id=' + this.article.author_id
+				})
+			},
 			getContent() {
 				var contentUrl = this.article.content
-				if (this.article.status === 'normal') {
-					uni.request({
-						url: contentUrl,
-						success: (res) => {
-							const {data} = res
-							this.content = data
+				uni.request({
+					url: contentUrl,
+					success: (res) => {
+						const {data} = res
+						this.nodes = this.towxml(data, 'markdown', {})
+						if (this.mode === "article") {
 							this.updateBrowseCount = setTimeout(()=> {
-								console.log("更新观看");
+								var data = {}
+								data[this.indexInTopic] = this.article._id
+								this.$emit('browse', data)
 							}, 3000)
-						},
-						fail: (res) => {
-							
+						} else if (this.mode === "topic") {
+							var d = {}
+							d["index"] = this.indexInTopic
+							d["id"] = this.article._id
+							this.$emit('browse', d)
 						}
-					})
-				}
+					},
+					fail: (res) => {
+						uni.showToast({
+							title: '请检查你的网络',
+							icon: 'none'
+						})
+					}
+				})
 			},
 			follow(data) {
 				var uid = this.userid
@@ -162,16 +169,13 @@
 					this.updateAuthorLike(uid, data)
 				}
 			},
-			updateAuthorLike(uid, data) {
+			updateAuthorLike(uid, author) {
 				uni.showLoading()
 				uni.request({
-					url: 'http://localhost:8000/forum/author_like',
-					data: {
-						id: uid,
-						author: data
-					},
+					url: this.$api.address + `forum/author_like/${uid}/${author}`,
 					success: (res) => {
-						if (res.data.code === 200) {
+						const {code, data} = res.data
+						if (code === 200) {
 							var userinfo = this.systemUserInfo
 							uni.hideLoading()
 							uni.$emit('update_author_follow')
@@ -184,7 +188,7 @@
 								userinfo.follow_count = userinfo.follow_count - 1
 							}
 							this.$store.dispatch('set_system_userinfo', userinfo)
-						} else {
+						} else if (code === 500) {
 							uni.hideLoading()
 							this.is_author_like = !this.is_author_like
 							uni.showToast({
@@ -212,14 +216,10 @@
 					this.updateArticleLike(uid, data)
 				}
 			},
-			updateArticleLike(uid, data) {
+			updateArticleLike(uid, article) {
 				uni.showLoading()
 				uni.request({
-					url: 'http://localhost:8000/forum/update_like',
-					data: {
-						id: uid,
-						article: data
-					},
+					url: this.$api.address + `forum/update_like/${uid}/${article}`,
 					success: (res) => {
 						uni.hideLoading()
 						if (res.data.code === 200) {
@@ -262,23 +262,20 @@
 					}
 				}
 			},
-			updateArticleThumbs(uid, data) {
+			updateArticleThumbs(uid, article) {
 				uni.showLoading()
 				uni.request({
-					url: 'http://localhost:8000/forum/update_thumbsup',
-					data: {
-						id: uid,
-						article: data
-					},
+					url: this.$api.address + `forum/update_thumbsup/${uid}/${article}`,
 					success: (res) => {
-						if (res.data.code === 200) {
+						const {code, data} = res.data
+						if (code === 200) {
 							uni.hideLoading()
 							this.thumbs_up_count++
 							uni.showToast({
-								title: res.data.data,
+								title: data,
 								icon: 'none'
 							})
-						} else {
+						} else if(code === 500){
 							uni.hideLoading()
 							this.is_thumbs_up = !this.is_thumbs_up
 							uni.showToast({
@@ -334,19 +331,23 @@
 			},
 			getComment() {
 				uni.request({
-					url: 'http://localhost:8000/forum/get_comment',
-					data: {
-						article: this.article._id
-					},
+					url: this.$api.address + `forum/get_comment/${this.article._id}`,
 					success: (res) => {
-						if (res.data.code === 200) {
-							this.commentList = res.data.data
+						const {code, data} = res.data
+						if (code === 200) {
+							this.commentList = data
 						} else {
-							
+							uni.showToast({
+								title: '获取评论数据失败',
+								icon: 'none'
+							})
 						}
 					},
 					fail: (res) => {
-						
+						uni.showToast({
+							title: '获取评论数据失败',
+							icon: 'none'
+						})
 					}
 				})
 			},
@@ -399,6 +400,22 @@
 					}
 				})
 			},
+			loadArticle(index) {
+				var data = this.article
+				this.title = data.title
+				this.author_name = data.author_name
+				this.browse_count = data.browse_count
+				this.thumbs_up_count = data.thumbs_up_count
+				this.create_time = data.create_time
+				this.is_like = data.is_like
+				this.is_thumbs_up = data.is_thumbs_up
+				this.is_author_like = data.is_author_like
+				this.getComment()
+				if (index === 0) {
+					this.getContent()
+					this.reqTime++
+				}
+			}
 		}
 	}
 </script>

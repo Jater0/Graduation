@@ -1,8 +1,0 @@
-{
-  "navigationBarTitleText": "",
-  "enablePullDownRefresh": false,
-  "usingComponents": {
-    "uni-load-more": "/components/uni-load-more/uni-load-more",
-    "uni-icons": "/components/uni-icons/uni-icons"
-  }
-}

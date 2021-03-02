@@ -12,7 +12,9 @@ const store = new Vuex.Store({
 		labelAll: uni.getStorageSync('labelAll') || [],
 		labelList: uni.getStorageSync('labelList') || [],
 		answerTopicCache: {},
-		topicDetailCache: {}
+		topicDetailCache: {},
+		authorInfoCache: {},
+		browseAll: 0
 	},
 	mutations: {
 		SET_HISTORY(state, history) {
@@ -47,6 +49,15 @@ const store = new Vuex.Store({
 		},
 		CLEAR_TOPIC_DETAIL_CACHE(state) {
 			state.topicDetailCache = {}
+		},
+		SET_AUTHOR_INFO_CACHE(state, authorInfoCache) {
+			state.authorInfoCache = authorInfoCache
+		},
+		CLEAR_AUTHOR_INFO_CACHE(state) {
+			state.authorInfoCache = {}
+		},
+		SET_BROWSE_ALL(state, browseAll) {
+			state.browseAll = browseAll
 		}
 	},
 	actions: {
@@ -96,6 +107,15 @@ const store = new Vuex.Store({
 		},
 		clear_topic_detail_cache({commit}) {
 			commit('CLEAR_TOPIC_DETAIL_CACHE')
+		},
+		set_author_info_cache({commit}, authorInfoCache) {
+			commit('SET_AUTHOR_INFO_CACHE', authorInfoCache)
+		},
+		clear_author_info_cache({commit}) {
+			commit('CLEAR_AUTHOR_INFO_CACHE')
+		},
+		set_browse_all({commit}, browseAll) {
+			commit('SET_BROWSE_ALL', browseAll)
 		}
 	}
 })

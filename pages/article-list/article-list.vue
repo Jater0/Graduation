@@ -1,12 +1,15 @@
 <template>
 	<view class="content">
-		<list-scroll class="list-scroll">
-			<view class="" v-for="(item, index) in listCacheData" :key="index">
+		<list-scroll class="list-scroll" @loadmore="loadmore">
+			<view class="" v-for="(item, index) in listCacheData" :key="index" @click="openDetail(item, index)">
 				<view class="list-card mode-cloumn">
 					<view class="list-card-content">
 						<view class="list-card-content-title">
 							<text>{{item.title}}</text>
-							<likes :item="item" :types="types"></likes>
+							<likes :item="item" types="follow" v-if="params === 'favorites'"></likes>
+							<view class="icons" v-else @click.stop="confirmMoveTrash(item._id, index)">
+								<uni-icons type="trash" size="20"></uni-icons>
+							</view>
 						</view>
 						<view class="list-card-content-des">
 							<view class="list-card-content-des-label">
@@ -18,12 +21,12 @@
 				</view>
 			</view>
 		</list-scroll>
+		<uni-load-more iconType="snow" :status="this.load.loading"></uni-load-more>
 	</view>
 </template>
 
 <script>
 	import ListScroll from '@/components/list-scroll/list-scroll.vue'
-	import ListCard from '@/components/list-card/list-card.vue'
 	import Likes from '@/components/likes/likes.vue'
 	import {mapState} from 'vuex'
 	export default {
@@ -49,9 +52,14 @@
 					title: "我的话题"
 				})
 			}
+			uni.$on('is_delete', (data) => {
+				var oldList = this.listCacheData
+				oldList.splice(data, 1)
+				this.listCacheData = oldList
+			})
 		},
 		components: {
-			ListScroll, ListCard, Likes
+			ListScroll, Likes
 		},
 		data() {
 			return {
@@ -74,16 +82,14 @@
 					} else if (params === 'myarticle') {
 						type = "get_article_own"
 					} else if (params === 'mytopic') {
-						
+						type = "get_topic_own"
 					}
 					var url = this.$api.address + `forum/${type}/${this.userid}/${this.load.page}/${this.pageSize}`
-					console.log(url);
 					uni.request({
 						method: 'GET',
 						url:url,
 						success: (res) => {
 							const {data, code} = res.data
-							console.log(data);
 							if (code === 200) {
 								if (data.length === 0) {
 									let oldLoad = {}
@@ -96,7 +102,6 @@
 								let oldList = this.listCacheData
 								oldList.push(...data)
 								this.listCacheData = oldList
-								console.log(this.listCacheData);
 							} else if (code === 500) {
 								let oldLoad = {}
 								oldLoad.loading = 'noMore',
@@ -119,6 +124,69 @@
 				if (this.load.loading === 'noMore') return
 				this.load.page++
 				this.getArticle(this.params)
+			},
+			openDetail(item, index) {
+				this.$store.dispatch('set_topic_detail_cache', item)
+				if (this.params === "mytopic") {
+					uni.navigateTo({
+						url: '/pages/topics-detail/topics-detail?params=' + item._id
+					})
+				} else {
+					uni.navigateTo({
+						url: '/pages/article-detail/article-detail?params=' + item._id + '&mode=' + item.mode + '&index=' + index
+					})
+				}
+			},
+			confirmMoveTrash(id, index) {
+				uni.showModal({
+					title: '删除确认',
+					content: '你确认要删除这篇文章/话题吗???如果删除其下面的数据将会一同消失',
+					success: (res) => {
+						if (res.confirm) {
+							this.moveTrash(id, index)
+						}
+					}
+				})
+			},
+			moveTrash(id, index) {
+				uni.showLoading()
+				var type = ""
+				if (this.params === 'mytopic') {
+					type = "topic"
+				} else if (this.params === 'myarticle') {
+					type = "article"
+				}
+				uni.request({
+					method: 'POST',
+					url: this.$api.address + `forum/delete/${type}/${id}`,
+					success: (res) => {
+						uni.hideLoading()
+						const {code, data} = res.data
+						if (code === 200) {
+							uni.showToast({
+								title: '删除数据成功',
+								icon: 'success'
+							})
+							var oldList = this.listCacheData
+							oldList.splice(index, 1)
+							this.listCacheData = oldList
+							this.$forceUpdate()
+							uni.$emit('delete_topic_article')
+						} else if (code === 500) {
+							uni.showToast({
+								title: '删除数据失败, 请稍后再试',
+								icon: 'none'
+							})
+						}
+					},
+					fail: (err) => {
+						uni.hideLoading()
+						uni.showToast({
+							title: '删除数据失败, 请稍后再试',
+							icon: 'none'
+						})
+					}
+				})
 			}
 		}
 	}
@@ -157,6 +225,16 @@
 							display: -webkit-box;
 							-webkit-line-clamp: 2;
 							-webkit-box-orient: vertical;
+						}
+						.icons {
+							position: absolute;
+							right: 0;
+							top: 0;
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							width: 40rpx;
+							height: 40rpx;
 						}
 					}
 					.list-card-content-des {

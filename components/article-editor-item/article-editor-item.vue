@@ -1,22 +1,18 @@
 <template>
 	<view class="toolbar">
+		<view class="iconfont icon-waimai" @click="toolBarClick('header')"></view>
 		<view class="iconfont icon-bold" @click="toolBarClick('bold')"></view>
 		<view class="iconfont icon-italic" @click="toolBarClick('italic')"></view>
-		<view class="iconfont icon-xiahuaxian1" @click="toolBarClick('header')"></view>
-		<view class="iconfont icon-underline" @click="toolBarClick('underline')"></view>
-		<view class="iconfont icon-strike" @click="toolBarClick('strike')"></view>
-		<view class="iconfont icon-sup" @click="toolBarClick('sup')"></view>
-		<view class="iconfont icon-sub" @click="toolBarClick('sub')"></view>
-		<view class="iconfont icon-alignleft" @click="toolBarClick('alignleft')"></view>
-		<view class="iconfont icon-aligncenter" @click="toolBarClick('aligncenter')"></view>
-		<view class="iconfont icon-alignright" @click="toolBarClick('alignright')"></view>
+		<view class="iconfont icon-strikethrough" @click="toolBarClick('strikethrough')"></view>
+		<view class="iconfont icon-quotation_marks" @click="toolBarClick('blockquote')"></view>
+		<view class="iconfont icon-richtextbulletedlist" @click="toolBarClick('bulletedlist')"></view>
+		<view class="iconfont icon-richtextnumberedlist" @click="toolBarClick('numberedlist')"></view>
+		<view class="iconfont icon-764bianjiqi_charubiaoge" @click="toolBarClick('table')"></view>
+		<view class="iconfont icon-758bianjiqi_fengexian" @click="toolBarClick('hr')"></view>
 		<view class="iconfont icon-link" @click="toolBarClick('link')"></view>
-		<view class="iconfont icon-image" @click="toolBarClick('imgage')"></view>
-		<view class="iconfont icon-code" @click="toolBarClick('code')"></view>
-		<view class="iconfont icon-table" @click="toolBarClick('table')"></view>
-		<view class="iconfont icon-qingkong" @click="toolBarClick('clear')"></view>
-		<view class="iconfont icon-explore" @click="toolBarClick('explore')"></view>
-		<view class="iconfont icon-blockquote" @click="toolBarClick('blockquote')"></view>
+		<view class="iconfont icon-image" @click="toolBarClick('image')"></view>
+		<view class="iconfont icon-insert_tag_field" @click="toolBarClick('code')"></view>
+		<view class="iconfont icon-ziyuan285" @click="toolBarClick('clear')"></view>
 	</view>
 </template>
 
@@ -36,8 +32,7 @@
 </script>
 
 <style lang="scss">
-	@import '@/static/markdown.css';
-	@import url("@/components/mpvue-wxparse/src/wxParse.css");
+	@import '@/static/md-icons.css';
 	.toolbar {
 		width: 100%;
 		border: none;

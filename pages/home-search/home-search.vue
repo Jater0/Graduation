@@ -1,14 +1,14 @@
 <template>
 	<view class="home">
-		<navbar :isSearch="true" @search="search" @backspace="backspace" @scroll="getRecommand" v-model="value"></navbar>
+		<navbar :isSearch="true" @search="search" @backspace="backspace" @scroll="getHotList" v-model="value"></navbar>
 		<view class="home-list">
 			<view v-if="isShowHistory" class="label-box">
 				<view class="label-header">
 					<text class="label-title bold">搜索推荐</text>
 				</view>
 				<view class="label-recommend">
-					<view class="label-recommend-item" :class="{posright: (index+1)%2==0}" v-for="(item, index) in recommendList" :key="index" @click="openRecommend(item)">
-						<text>{{index+1}}{{space}}</text>{{item.length > 10?item.substring(0, 10)+'...':item}}
+					<view class="label-recommend-item" :class="{posright: (index+1)%2==0}" v-for="(item, index) in recommendList" :key="index" @click="openHotList(item)">
+						<text>{{index+1}}{{space}}</text>{{item.title.length > 10?item.title.substring(0, 13)+'...':item.title}}
 					</view>
 				</view>
 			</view>
@@ -24,6 +24,15 @@
 					没有搜索历史
 				</view>
 			</view>
+			<list-scroll v-if="!isShowHistory" class="list-scroll">
+				<uni-load-more v-if="loading" status="loading" iconType="snow"></uni-load-more>
+				<view v-if="searchList.length > 0">
+					<list-card mode="base" v-for="item in searchList" :key="item._id" :item="item" types="follow"></list-card>
+				</view>
+				<view v-if="searchList.length === 0 && !loading" class="no-data">
+					没有搜索到具体内容
+				</view>
+			</list-scroll>
 		</view>
 	</view>
 </template>
@@ -48,11 +57,6 @@
 		computed: {
 			...mapState(['historys'])
 		},
-		// watch: {
-		// 	recommendList(newVal) {
-		// 		this.recommendList = newVal
-		// 	}
-		// },
 		methods: {
 			// 实现当用户键入backspace键时, 取消搜索界面
 			backspace(value) {
@@ -77,10 +81,13 @@
 			openHistory(item) {
 				this.value = item.name
 			},
-			openRecommend(item) {
-				this.value = item
+			openHotList(item) {
+				this.value = item.title
+				uni.request({
+					url: this.$api.address + ''
+				})
 			},
-			getRecommand(data) {
+			getHotList(data) {
 				this.recommendList = data
 			}
 		}

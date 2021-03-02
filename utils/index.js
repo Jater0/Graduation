@@ -8,7 +8,6 @@ export const showLoginModel = () => {
 					url: '/pages/tabbar/my/my'
 				})
 			} else if(res.cancel) {
-				console.log("Cancel");
 			}
 		}
 	})

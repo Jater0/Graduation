@@ -1,7 +1,7 @@
 <template>
-	<view>
+	<view style="height: 100%;">
 		<view v-if="isAnswerTopic && !showConvert" style="font-size: 50rpx; color: #F07373;">回复话题: {{topic_title}}</view>
-		<input v-if="!showConvert" type="text" v-model="title" placeholder="输入文章标题..." style="font-size: 35rpx; margin-top: 20rpx; margin-bottom: 10rpx;"/>
+		<input v-if="!showConvert" type="text" v-model="title" placeholder="输入文章标题..." style="font-size: 35rpx; margin: 20rpx"/>
 		<view style="float: right; width: 50%;">
 			<button type="default" @click="convert" style="line-height: 60rpx; margin: 15rpx; background-color: #30b33a; color: #FFFFFF;">{{showConvert?'回到编辑器':'查看效果'}}</button>
 		</view>
@@ -10,13 +10,14 @@
 		</view>
 		<view v-if="!showConvert">
 			<article-editor-item @type="toolBarClick"></article-editor-item>
-			<view class="input-content">
-				<textarea v-model="textareaData" :maxlength="maxlength" :placeholder="maxlength" auto-height />
+			<view class="input-content" style="height: 100%;">
+				<textarea class="textarea" v-model="textareaData" :maxlength="maxlength" :placeholder="maxlength"/>
+				<view class="count">{{textareaData.length}}/{{maxlength}}</view>
 			</view>
 		</view>
 		<view v-if="showConvert">
-			<view class="input-content">
-				<u-parse :content="textareaHtml"></u-parse>
+			<view class="input-content" style="width: 100%;">
+				<towxml :nodes="nodes"></towxml>
 			</view>
 		</view>
 		<classify-selector ref="popup" @publish="publishArticle" :list="typeArray"></classify-selector>
@@ -24,13 +25,11 @@
 </template>
 
 <script>
-	import marked from '@/components/marked'
 	import EditorItem from '@/components/article-editor-item/article-editor-item.vue'
-	import UParse from '@/components/gaoyia-parse/parse.vue'
-	import wxParse from '@/components/mpvue-wxparse/src/wxParse.vue'
 	import uploadImage from '@/js_sdk/yushijie-ossutil/ossutil/uploadFile.js'
 	import ClassifySelector from '@/components/classify-selector/classify-selector.vue'
 	import {mapState} from 'vuex'
+	import towxml from '../../static/towxml/towxml'
 	export default {
 		computed: {
 			...mapState(['systemUserInfo', 'userid', 'labelAll', 'answerTopicCache'])
@@ -56,14 +55,12 @@
 		},
 		components: {
 			EditorItem,
-			UParse,
-			wxParse,
-			ClassifySelector
+			ClassifySelector,
+			towxml
 		},
 		data() {
 			return {
 				textareaData: "",
-				textareaHtml:"",
 				showConvert: false,
 				isAnswerTopic: false,
 				topic_id: "",
@@ -71,13 +68,13 @@
 				maxlength: 500,
 				title: "",
 				typeArray: [],
-				typeName: ''
+				typeName: '',
+				updateImageList: [],
+				nodes: {}
 			}
 		},
 		watch: {
-			textareaData(newVal) {
-				this.textareaHtml = marked(newVal);
-			}
+			
 		},
 		methods: {
 			getLabelName() {
@@ -87,6 +84,9 @@
 			},
 			convert() {
 				this.showConvert = !this.showConvert
+				if (this.showConvert) {
+					this.nodes = this.towxml(this.textareaData, 'markdown', {})
+				}
 			},
 			submit() {
 				if (this.textareaData === '' || this.textareaData.length === 0) {
@@ -107,16 +107,6 @@
 				if (this.isAnswerTopic) {
 					this.publishTopicAnswer()
 				} else {
-					console.log("PUBLISH");
-					let query = uni.createSelectorQuery()
-					let queryNode = query.selectAll('.wxParse')
-					queryNode.fields({
-						id: true,
-						dataset: true,
-						computedStyle: ['height']
-					}, (res) => {
-						console.log(res);
-					}).exec()
 					this.$refs.popup.open()
 				}
 			},
@@ -127,6 +117,7 @@
 				fs.writeFileSync(`${wx.env.USER_DATA_PATH}/forum.text`, this.textareaData, 'utf-8')
 				await uploadImage(`${wx.env.USER_DATA_PATH}/forum.text`, "forum-article/", result => {
 					content = result
+					this.answerTopic(this.userid, this.topic_id, this.title, this.typeName, content)
 				}, err => {
 					uni.hideLoading()
 				})
@@ -145,10 +136,11 @@
 				fs.writeFileSync(`${wx.env.USER_DATA_PATH}/forum.text`, this.textareaData, 'utf-8')
 				await uploadImage(`${wx.env.USER_DATA_PATH}/forum.text`, "forum-article/", result => {
 					content = result
+					var covers = this.updateImageList.length > 3?this.updateImageList.slice(0, 3):this.updateImageList
+					this.writeArticle(this.userid, this.title, data, content, covers)
 				}, err => {
 					uni.hideLoading()
 				})
-				this.writeArticle(this.title, data, content, covers)
 			},
 			countMaxLength() {
 				var star = this.systemUserInfo["integral_count"]
@@ -165,66 +157,212 @@
 			closeCommentView() {
 				this.$refs.popup.close()
 			},
-			answerTopic(title, data, content) {
+			answerTopic(userid, topic_id, title, classify, content) {
+				uni.showLoading()
 				uni.request({
-					url: ''
+					url: this.$api.address + `forum/answer_topic/${userid}/${topic_id}/${classify}`,
+					method: 'POST',
+					header: {
+						'content-type': 'application/json'
+					},
+					data: {
+						title: title,
+						content: content
+					},
+					success: (res) => {
+						uni.hideLoading()
+						const {code, data} = res.data
+						if (code === 200) {
+							uni.showToast({
+								title: `回复话题: ${this.topic_title}成功`
+							})
+							var cache = {
+								
+							}
+							uni.$emit('answer_topic', )
+							setTimeout(()=> {
+								uni.navigateBack()
+							}, 2000)
+						} else if (code === 500) {
+							uni.showToast({
+								title: '回复话题失败',
+								icon: 'none'
+							})
+						}
+					},
+					fail: (err) => {
+						uni.showToast({
+							title: '回复话题失败',
+							icon: 'none'
+						})
+					}
 				})
 			},
-			writeArticle(title, classify, content, covers) {
+			writeArticle(userid, title, classify, content, covers) {
+				uni.showLoading()
 				uni.request({
-					url: 'http://localhost:8000/forum/create_article',
+					url: this.$api.address + `forum/create_article/${userid}/${classify}`,
 					method: 'POST',
+					header: {
+						'content-type': 'application/json'
+					},
 					data: {
-						id: this.userid,
 						title: title,
-						classify: classify,
 						content: content,
 						covers: covers
+					},
+					success: (res) => {
+						const {code, data} = res.data
+						uni.hideLoading()
+						if (code === 200) {
+							uni.showToast({
+								title: "文章 上传成功"
+							})
+							this.title = ""
+							this.textareaData = ""
+							this.updateImageList = []
+							this.nodes = {}
+							this.showConvert = false
+						} else if (code === 500) {
+							uni.showToast({
+								title: "文章上传失败, 请稍后再试",
+								icon: 'none'
+							})
+						}
+					},
+					fail: (err) => {
+						uni.hideLoading()
+						uni.showToast({
+							title: "文章上传失败, 请稍后再试",
+							icon: 'none'
+						})
 					}
 				})
 			},
 			toolBarClick(type) {
 				switch (type) {
+					case 'header':
+						uni.showActionSheet({
+							itemList: ["标题1", "标题2", "标题3", "标题4", "标题5", "标题6"],
+							success: (res) => {
+								switch (res.tapIndex) {
+									case 0:
+										this.textareaData += "\n# 标题1\r"
+										break
+									case 1:
+										this.textareaData += "\n## 标题2\r"
+										break
+									case 2:
+										this.textareaData += "\n### 标题3\r"
+										break
+									case 3:
+										this.textareaData += "\n#### 标题4\r"
+										break
+									case 4:
+										this.textareaData += "\n##### 标题5\r"
+										break
+									case 5:
+										this.textareaData += "\n####### 标题6\r"
+										break
+									}
+							},
+						})
+						break
 					case 'bold':
 						this.textareaData += "**粗体文字**"
 						break
 					case 'italic':
-						this.textareaData += "*斜体* "
+						this.textareaData += "*斜体*"
 						break
-					case 'underline':
-					
+					case 'strikethrough':
+						this.textareaData += "~~删除线~~"
 						break
-					case 'imgage':
-					
+					case 'blockquote':
+						this.textareaData += "> 引用"
+						break
+					case 'bulletedlist':
+						this.textareaData += "\n- 无序列表"
+						break
+					case 'numberedlist':
+						this.textareaData += "\n0. 有序列表"
+						break
+					case 'table':
+						this.textareaData += "\n\n|列1|列2|列3|\n|-|-|-|\n|单元格1|单元格2|单元格3|\n"
+						break
+					case 'hr':
+						this.textareaData += "\n-----\n"
+						break
+					case 'link':
+						this.textareaData += "[description](http://)"
+						break
+					case 'image':
+						uni.chooseImage({
+							count: 1,
+							success: (res) => {
+								const tempfilepaths = res.tempFilePaths
+								this.updateImage(tempfilepaths[0])
+							},
+							fail: (err) => {
+								uni.showToast({
+									title: '选取照片失败, 权限问题',
+									icon: 'none'
+								})
+							}
+						})
 						break
 					case 'code':
 						this.textareaData += "\n``` 代码块 \n\n```\n"
 						break
-					case 'table':
-						this.textareaData += "\n|列1|列2|列3|\n|-|-|-|\n|单元格1|单元格2|单元格3|\n"
-						break
 					case 'clear':
-					
+						uni.showModal({
+							title: "提示",
+							content: "确认清空???",
+							success: (res) => {
+								if (res.confirm) {
+									this.textareaData = ""
+								}
+							}
+						})
 						break
 				}
-			}
+			},
+			async updateImage(imagePath) {
+				uni.showLoading()
+				await uploadImage(imagePath, 'forum-cover/', result => {
+					uni.hideLoading()
+					this.updateImageList.push(result)
+					this.textareaData += `\n![description](${result})\n`
+				}, err => {
+					uni.hideLoading()
+					uni.showToast({
+						title: '上传图片失败, 稍后再试',
+						icon: 'none'
+					})
+				})
+			},
 		}
 	}
 </script>
 
-<style>
-	@import '@/static/markdown.css';
-	@import url("@/components/mpvue-wxparse/src/wxParse.css");
-
+<style lang="scss">
 	.input-content {
 		width: 100%;
 	}
 
-	.input-content textarea {
-		padding: 16rpx 25rpx 15rpx 25rpx;
-		font-size: 30rpx;
-		min-height: 500rpx;
-		line-height: 1.5;
+	.input-content {
+		.textarea {
+			padding: 16rpx 25rpx 15rpx 25rpx;
+			min-height: 700rpx;
+			line-height: 1.5;
+			font-size: 24rpx;
+			width: 100%;
+		}
+		.count {
+			display: flex;
+			justify-content: flex-end;
+			font-size: 24rpx;
+			color: #999;
+		}
 	}
 
 	.preview {

@@ -33,8 +33,6 @@
 			} else {
 				this.getLabel()
 			}
-			console.log(this.$api.localhost());
-			console.log(this.$api.address);
 		},
 		watch: {
 			userid(newVal) {
@@ -53,12 +51,10 @@
 			// stateful methods
 			getLabel() {
 				uni.request({
-					url: 'http://localhost:8000/forum/get_label',
-					data: {
-						id: this.userid
-					},
+					url: this.$api.address + `forum/get_label/${this.userid}`,
 					success: (res) => {
 						const {data} = res.data
+						console.log(data);
 						// this storage contains label without '关注' & '推荐'
 						this.$store.dispatch('set_label_all', data)
 						// uni.setStorageSync('systemUserInfo', suserInfo)
@@ -76,7 +72,7 @@
 			// stateless methods
 			getLabelStateless() {
 				uni.request({
-					url: 'http://localhost:8000/forum/stateless/get_label',
+					url: this.$api.address + 'forum/stateless/get_label',
 					success: (res) => {
 						const {data} = res.data
 						let newData = data

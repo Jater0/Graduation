@@ -54,7 +54,7 @@
 				searchVal: '',
 				searchInputText: '',
 				hotList: [],
-				hotListIndex: 2
+				hotListIndex: 1
 			};
 		},
 		created() {
@@ -77,19 +77,42 @@
 			searchTextScroll() {
 				setInterval(() => {
 					setTimeout(() => {
-						if (this.hotListIndex == this.hotList.length - 2) {
+						if (this.hotListIndex == this.hotList.length - 1) {
 							this.hotListIndex = 0
 						}
-					  this.searchInputText = this.hotList[this.hotListIndex] + " | " + this.hotList[this.hotListIndex + 1]
-						this.hotListIndex += 2
+					  this.searchInputText = this.hotList[this.hotListIndex+1].title
+						this.hotListIndex += 1
 					}, 0)
 				}, 5000)
 			},
 			getSearchScrollText() {
-				this.hotList = ["Java", "Python", "Kotlin", "Javascript", "Vue", "React", "Redis", "iOS"]
-				this.searchInputText = this.hotList[0] + ' | ' + this.hotList[1]
-				this.$emit('scroll', this.hotList)
-				this.searchTextScroll()
+				uni.request({
+					method: 'GET',
+					url: this.$api.address + `forum/get_hot_list`,
+					success: (res) => {
+						const {code, data} = res.data
+						if (code === 200) {
+							if (data.length === 0) {
+								return
+							}
+							this.hotList = data
+							this.searchInputText = this.hotList[0].title
+							this.$emit('scroll', this.hotList)
+							this.searchTextScroll()
+						} else if (code === 500) {
+							uni.showToast({
+								title: '获取搜索推荐失败, 请稍后再试',
+								icon: 'none'
+							})
+						}
+					},
+					fail: (err) => {
+						uni.showToast({
+							title: '获取搜索推荐失败, 请稍后再试',
+							icon: 'none'
+						})
+					}
+				})
 			},
 			backToIndex() {
 				uni.switchTab({

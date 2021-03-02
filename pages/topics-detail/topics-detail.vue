@@ -10,7 +10,7 @@
 				</view>
 				<view class="topic-content-detail">
 					<view class="topic-content-detail-des">
-						<view class="topic-content-detail-des-name" @click="test">
+						<view class="topic-content-detail-des-name" @click="openAuthorDetail">
 							<text>{{topicDetail.author_name}}</text>
 						</view>
 						<view class="topic-content-detail-des-info">
@@ -29,7 +29,7 @@
 			<swiper :style="{height: articleAreaHeight +'px'}" @change="loadmore">
 				<swiper-item v-for="(item, index) in articles" :key="index">
 					<scroll-view scroll-y style="height: 100%;">
-						<article-detail :article="item"></article-detail>
+						<article-detail :article="item" :indexInTopic="index" @browse="getLoadDone" mode="topic"></article-detail>
 					</scroll-view>
 				</swiper-item>
 			</swiper>
@@ -59,7 +59,9 @@
 				topicDetail: {},
 				pageSize: 5,
 				noDataShow: false,
-				requestTime: 0
+				requestTime: 0,
+				browseCache: {},
+				updateBrowseCount: null,
 			};
 		},
 		filters: {
@@ -86,10 +88,7 @@
 			getTopicDetailById(topic_id) {
 				uni.showLoading()
 				uni.request({
-					url: 'http://localhost:8000/forum/get_topic',
-					data: {
-						id: topic_id
-					},
+					url: this.$api.address + `forum/get_topic/${topic_id}`,
 					success: (res) => {
 						const {code, data} = res.data
 						if (code === 200) {
@@ -173,9 +172,6 @@
 					}
 				})
 			},
-			change(e) {
-				this.tabIndex = e.detail.current
-			},
 			showHeight(e) {
 				var index = e.tabIndex
 				var height = e.height
@@ -201,13 +197,61 @@
 				})
 			},
 			loadmore(data) {
+				var current = data.detail.current
+				clearTimeout(this.updateBrowseCount)
 				console.log("no-more");
 				if (this.load.loading === 'noMore') return
-				if (data.detail.current === this.articles.length) {
+				if (current === this.articles.length) {
 					this.load.page++
 					this.getArticleByTopicId(this.topicDetail._id)
 				}
-			}
+				if (this.browseCache[current].browsed) {
+					console.log("browsed");
+					return
+				}
+				this.updateBrowseCount = setTimeout(() => {
+					this.updateBrowse(this.browseCache[current].id, current)
+					this.browseCache[current].browsed = true
+				}, 3000)
+			},
+			getLoadDone(data) {
+				this.browseCache[data.index] = {
+					id: data.id,
+					browsed: false
+				}
+				if (data.index === 0) {
+					this.updateBrowseCount = setTimeout(() => {
+						this.updateBrowse(this.browseCache[0].id, 0);
+						this.browseCache[0].browsed = true;
+					}, 3000);
+				}
+			},
+			updateBrowse(id,current) {
+				uni.request({
+					method: 'POST',
+					url: this.$api.address + `forum/update_article_browse/${id}`,
+					success: (res) => {
+						const {data, code} = res.data
+						if (code === 200) {
+							uni.showToast({
+								title: '浏览3s'
+							})
+							this.articles[current].browse_count++
+							this.topicDetail.browse_count++
+						} else if (code === 500) {
+							
+						}
+					},
+					fail: (err) => {
+						console.log("update browse count failed");
+					}
+				})
+			},
+			openAuthorDetail() {
+				uni.navigateTo({
+					url: '/pages/user-detail/user-detail?params=article&id=' + this.topicDetail.author_id
+				})
+			},
 		}
 	}
 </script>

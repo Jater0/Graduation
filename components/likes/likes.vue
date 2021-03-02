@@ -67,11 +67,7 @@
 			updateLikes() {
 				uni.showLoading()
 				uni.request({
-					url: 'http://localhost:8000/forum/update_like',
-					data: {
-						id: this.userid,
-						article: this.item._id
-					},
+					url: this.$api.address + `forum/update_like/${this.userid}/${this.item._id}`,
 					success: (res) => {
 						uni.hideLoading()
 						if (res.data.code === 200) {

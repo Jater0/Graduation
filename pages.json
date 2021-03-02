@@ -91,6 +91,30 @@
                 "enablePullDownRefresh": false
             }
             
+        },{
+					"path":"pages/follow-list/follow-list",
+					"style": {
+						"navigationBarTitleText":"",
+						"enablePullDownRefresh": false
+					}
+				}
+        ,{
+            "path" : "pages/user-detail/user-detail",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/my-detail/my-detail",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "个人信息设置",
+                "enablePullDownRefresh": false
+            }
+            
         }
     ],
 	"globalStyle": {
